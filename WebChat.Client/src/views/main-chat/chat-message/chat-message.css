@@ -1,0 +1,56 @@
+.chat-message {
+  max-width: calc(100% - 200px);
+  @apply box-border;
+  align-self: start;
+  .user-name {
+    display: none;
+  }
+  .message-text {
+    word-wrap: break-word;
+    .make-emojis-large:has(:only-child) {
+      font-size: 30px;
+    }
+  }
+  .message-time {
+    display: block;
+  }
+  .message-status {
+    display: none;
+  }
+  .user-avatar {
+    opacity: 0;
+  }
+}
+
+.chat-message.break {
+  .user-name {
+    display: block;
+  }
+  .user-avatar {
+    opacity: 1;
+  }
+}
+*:not(.chat-message) + .chat-message {
+  .user-name {
+    display: block;
+  }
+}
+
+.chat-message.me {
+  align-self: end;
+  .MuiCard-root {
+    background-color: #e5efff;
+  }
+  .user-name {
+    display: none;
+  }
+  &:last-child .message-status {
+    display: block;
+  }
+}
+.chat-message .more-btn {
+  opacity: 0;
+}
+.chat-message:hover .more-btn {
+  opacity: 1;
+}

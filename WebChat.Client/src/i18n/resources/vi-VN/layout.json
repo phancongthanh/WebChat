@@ -1,0 +1,125 @@
+{
+  "main-tab": {
+    "btn-title": {
+      "cloud": "Cloud của tôi",
+      "message": "Tin nhắn",
+      "friend": "Bạn bè",
+      "group": "Hội nhóm",
+      "notification": "Thông báo",
+      "setting": "Cài đặt"
+    }
+  },
+  "change-password": {
+    "title": "Đổi mật khẩu",
+    "old": "Mật khẩu hiện tại",
+    "new": "Mật khẩu mới",
+    "confirm": "Nhập lại mật khẩu mới"
+  },
+  "app-info": {
+    "title": "WebChat",
+    "fields": {
+      "version": "Phiên bản:",
+      "email": "Email:"
+    },
+    "values": {
+      "version": "0.4.0",
+      "email": "phancongthanhvtvpvn@gmail.com"
+    }
+  },
+  "logout-confirm": "Bạn có chắc chắn muốn đăng xuất khỏi tải khoản?",
+  "settings-menu": {
+    "account-info": "Thông tin tài khoản",
+    "change-password": "Đổi mật khẩu",
+    "settings": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "about": "Giới thiệu",
+    "logout": "Đăng xuất",
+    "vi": "Tiếng Việt",
+    "en": "English",
+    "version": "Thông tin phiên bản",
+    "report": "Báo cáo"
+  },
+  "conversation-list": {
+    "tabs": {
+      "all": "Tất cả",
+      "unread": "Chưa đọc",
+      "hidden": "Đã ẩn",
+      "unfriend": "Người lạ"
+    },
+    "empty": "Chưa có hội thoại",
+    "cloud-name": "Cloud của tôi",
+    "time": {
+      "few-sec": "vài giây",
+      "mins": "{{mins}} phút",
+      "hours": "{{hours}} giờ",
+      "days": "{{days}} ngày"
+    },
+    "you": "Bạn",
+    "file-message": "Đã gửi một tin nhắn file",
+    "menu": {
+      "show": "Bỏ ẩn",
+      "hidden": "Ẩn hội thoại",
+      "delete": "Xóa tin nhắn"
+    }
+  },
+  "friend-contacts": {
+    "add-friend": "Thêm bạn bằng số điện thoại",
+    "friend-requests": "Danh sách kết bạn",
+    "cloud": "Cloud của tôi",
+    "cloud-description": "Gửi File giữa các thiết bị",
+    "friend": "Bạn bè ({{count}})",
+    "menu": {
+      "more": "Chi tiết",
+      "alias": "Đặt tên gợi nhớ",
+      "block": "Chặn",
+      "unblock": "Bỏ chặn",
+      "delete": "Xóa bạn"
+    },
+    "search": {
+      "title": "Tìm bạn",
+      "not-found-user": "Không tìm thấy người dùng",
+      "placeholder": "Vui lòng điền số điện thoại",
+      "recent-searches": "Tìm kiếm gần đây:",
+      "no-recent-searches": "Không có tìm kiếm nào gần đây",
+      "invalid-phone": "Số điện thoại phải dài 7 đến 15 ký tự không kể số 0 đứng đầu.",
+      "required-phone": "Số điện thoại không được bỏ trống."
+    }
+  },
+  "group-contacts": {
+    "create-group": "Tạo nhóm với bạn bè",
+    "search-group": "Tìm nhóm",
+    "joined-group-description": "Tham gia nhóm với mọi người",
+    "requests-invitations": "Yêu cầu và lời mời",
+    "group": "Nhóm ({{count}})",
+    "menu": {
+      "more": "Chi tiết",
+      "name": "Đổi tên",
+      "leave": "Rời nhóm"
+    },
+    "create": {
+      "title": "Tạo nhóm",
+      "name": "Tên nhóm",
+      "name-recommend": "Chọn một cái tên cho nhóm!",
+      "userIds": "Danh sách thành viên",
+      "invalid-userIds": "Nhóm phải tối thiểu 3 thành viên",
+      "required-name": "Tên nhóm không được để trống",
+      "invalid-name": "Tên nhóm không hợp lệ",
+      "not-enough-friend": "Không đủ bạn bè",
+      "not-enough": "Không đủ bạn bè để tạo nhóm với tối thiểu 3 thành viên.",
+      "should-add-friend": "Hãy kết thêm bạn để tạo nhóm với nhiều người!"
+    },
+    "search": {
+      "title": "Tìm nhóm",
+      "code": "Mã nhóm",
+      "required-code": "Mã nhóm không được để trống",
+      "invalid-code": "Mã nhóm không hợp lệ",
+      "not-found-group": "Không tìm thấy nhóm",
+      "placeholder": "Vui lòng điền mã nhóm",
+      "recent-searches": "Tìm kiếm gần đây:",
+      "no-recent-searches": "Không có tìm kiếm nào gần đây"
+    }
+  },
+  "search-input": {
+    "placeholder": "Tìm kiếm"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "user-profile-dialog": {
+    "title": "Thông tin",
+    "user-is-blocked": "Người dùng đang bị chặn",
+    "fields": {
+      "mutual-group": "Nhóm chung",
+      "phone-number": "Điện thoại",
+      "gender": "Giới tính",
+      "birthday": "Ngày sinh"
+    }
+  },
+  "group-profile-dialog": {
+    "title": "Thông tin",
+    "members": "{{count}} thành viên"
+  },
+  "update-info-dialog": {
+    "title": "Cập nhật thông tin",
+    "name-recommend": "Sử dụng tên thật để bạn bè dễ dàng nhận diện hơn",
+    "change-avatar": "Đổi ảnh đại diện",
+    "fields": {
+      "display-name": "Tên hiển thị",
+      "phone-number": "Số điện thoại đăng ký",
+      "birthday": "Ngày sinh",
+      "gender": "Giới tính",
+      "required-name": "Tên không được để trống",
+      "invalid-name": "Tên không hợp lệ"
+    },
+    "alert": {
+      "title": "Thông báo",
+      "updated-data-successfully": "Cập nhật dữ liệu thành công, vui lòng tải lại!"
+    }
+  },
+  "confirm-dialog": {
+    "title": "Xác nhận"
+  }
+}

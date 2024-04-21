@@ -1,0 +1,20 @@
+{
+  "unknown": {
+    "title": "Có lỗi xảy ra",
+    "description": "Có lỗi xảy ra, vui lòng thử lại sau!"
+  },
+  "no-internet": {
+    "title": "Có lỗi xảy ra",
+    "description": "Không thể kết nối tới máy chủ!"
+  },
+  "server": {
+    "title": "Có lỗi xảy ra",
+    "description": "Có lỗi xảy ra, vui lòng thử lại sau!"
+  },
+  "api": {
+    "500": {
+      "title": "Có lỗi xảy ra",
+      "description": "Có lỗi xảy ra, vui lòng thử lại sau!"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "loading": {
+    "step-1": "Kiểm tra đăng nhập",
+    "step-2": "Lấy thông tin người dùng hiện tại",
+    "step-3": "Tải danh sách bạn bè",
+    "step-4": "Tải danh sách nhóm",
+    "step-5": "Tải các cuộc thoại",
+    "step-6": "Kết nối web socket"
+  },
+  "start-box": {
+    "title": "Chào mừng đến với ",
+    "description": "Khám phá những tiện ích hỗ trợ làm việc và trò chuyện cùng người thân, bạn bè được tối ưu hoá cho máy tính của bạn.",
+    "0": {
+      "title": "Nhắn tin nhiều hơn, soạn thảo ít hơn",
+      "description": "Sử dụng \"Tin nhắn nhanh\" để lưu sẵn các tin nhắn thường dùng và gửi nhanh trong hội thoại bất kỳ."
+    },
+    "1": {
+      "title": "Tin nhắn tự xóa",
+      "description": "Từ giờ tin nhắn đã có thể tự động tự xóa sau khoảng thời gian nhất định."
+    },
+    "2": {
+      "title": "Gọi nhóm và làm việc hiệu quả với Zalo Group Call",
+      "description": "Trao đổi công việc mọi lúc mọi nơi"
+    },
+    "3": {
+      "title": "Trải nghiệm xuyên suốt",
+      "description": "Kết nối và giải quyết công việc trên mọi thiết bị với dữ liệu luôn được đồng bộ"
+    },
+    "4": {
+      "title": "Gửi File nặng?",
+      "description": "Đã có Zalo PC \"xử\" hết"
+    },
+    "5": {
+      "title": "Chat nhóm với đồng nghiệp",
+      "description": "Tiện lợi hơn, nhờ các công cụ hỗ trợ chat trên máy tính"
+    },
+    "6": {
+      "title": "Giải quyết công việc hiệu quả hơn, lên đến 40%",
+      "description": "Với Zalo PC"
+    }
+  },
+  "friend-requests": {
+    "title": "Danh sách kết bạn",
+    "empty": "Bạn chưa có lời mời kết bạn nào",
+    "sent-requests": "Lời mời kết bạn đã gửi ({{count}})",
+    "received-requests": "Lời mời kết bạn đã nhận ({{count}})",
+    "sent-time": "Gửi lúc: "
+  },
+  "group-requests": {
+    "title": "Yêu cầu và lời mời",
+    "empty": "Bạn chưa gửi và nhận bất cứ yêu cầu tham gia nhóm nào",
+    "sent-requests": "Yêu cầu tham gia nhóm đã gửi ({{count}})",
+    "received-invitations": "Lời mời vào nhóm đã nhận ({{count}})",
+    "sent-time": "Gửi lúc: "
+  },
+  "cloud-chat": {
+    "title": "Cloud của tôi",
+    "sub-title": "Trao đổi File giữa các thiết bị của bạn"
+  },
+  "user-chat": {
+    "stranger": "Người lạ",
+    "offline": "Offline",
+    "online": "Online",
+    "minutes": "{{minutes}} phút trước",
+    "hours": "{{hours}} giờ trước",
+    "days": "{{days}} ngày trước"
+  },
+  "group-chat": {
+    "member": "{{count}} thành viên",
+    "info": {
+      "title": "Thông tin nhóm",
+      "header": {
+        "manage": "Quản lý nhóm",
+        "member-list": "Danh sách thành viên",
+        "group-requests": "Danh sách yêu cầu tham gia nhóm",
+        "group-invitations": "Danh sách lời mời vào nhóm"
+      },
+      "setting": {
+        "allowChangeGName": "Cho phép thành viên thay đổi tên nhóm",
+        "allowSendGInvitation": "Cho phép thành viên mời người khác vào nhóm",
+        "membershipApproval": "Chế độ phê duyệt thành viên mới",
+        "readRecentMessage": "Cho phép thành viên mới đọc tin nhắn gần nhất",
+        "joinGroupByLink": "Cho phép dùng mã nhóm tham gia nhóm",
+        "groupCode": "Mã nhóm"
+      },
+      "send-by": "Gửi bởi {{name}}",
+      "join-by": "Thêm bởi {{name}}",
+      "reject-confirm": "Bạn có chắc chắn muốn từ chối yêu cầu của {{name}}?",
+      "role-actions": {
+        "member": "Chuyển thành viên",
+        "deputy-group": "Thêm quản trị viên",
+        "leader": "Chuyển trưởng nhóm"
+      },
+      "confirms": {
+        "member": "Bạn có chắc chắn muốn thu hồi quyền của {{name}}?",
+        "deputy-group": "Bạn có chắc chắn muốn {{name}} làm quản trị viên?",
+        "leader": "Bạn có chắc chắn muốn chuyển trưởng nhóm cho {{name}}?",
+        "block": "Bạn có chắc chắn muốn chặn {{name}}?",
+        "unblock": "Bạn có chắc chắn muốn bỏ chặn {{name}}?",
+        "kick-member": "Bạn có chắc chắn muốn xóa {{name}}?"
+      }
+    },
+    "send-invitation": {
+      "title": "Gửi lời mời tham gia nhóm",
+      "search-placeholder": "Nhập tên hoặc số điện thoại",
+      "search-result": "Kết quả tìm kiếm",
+      "recent": "Gần đây",
+      "friends": "Bạn bè"
+    }
+  }
+}

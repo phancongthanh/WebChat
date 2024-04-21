@@ -1,0 +1,53 @@
+{
+  "fields": {
+    "phone": "Số điện thoại",
+    "password": "Mật khẩu",
+    "name": "Tên của bạn",
+    "birthday": "Ngày sinh",
+    "gender": "Giới tính",
+    "validate-errors": {
+      "country": "",
+      "phone": {
+        "invalid": "Số điện thoại phải dài 7 đến 15 ký tự không kể số 0 đứng đầu.",
+        "required": "Số điện thoại không được bỏ trống."
+      },
+      "name": {
+        "invalid": "Tên không hợp lệ.",
+        "required": "Tên không được bỏ trống."
+      }
+    }
+  },
+  "title": {
+    "sign-up": "Đăng ký tài khoản WebChat",
+    "login": "Đăng nhập tài khoản WebChat",
+    "forgot": "Khôi phục mật khẩu WebChat"
+  },
+  "header": {
+    "first": "Đăng nhập tài khoản",
+    "last": "để kết nối với ứng dụng WebChat"
+  },
+  "tabs": {
+    "sign-up": "Đăng ký",
+    "login": "Đăng nhập"
+  },
+  "forgot": {
+    "title": "Nhập số điện thoại để nhận mã xác thực",
+    "error-message": "Tính năng này chưa có sẵn!\nCó thể do áp lực khiến bạn không nhớ mật khẩu, Hãy thư giãn và thử lại lần sau, xin cảm ơn!",
+    "btn": {
+      "next": "Tiếp tục",
+      "back": "Quay lại"
+    }
+  },
+  "login": {
+    "hasFaliedLogin": "Tên đăng nhập hoặc mật khẩu không khớp, vui lòng nhập lại",
+    "btns": {
+      "submit": "Đăng nhập với mật khẩu",
+      "forgot": "Quên mật khẩu?"
+    }
+  },
+  "sign-up": {
+    "btns": {
+      "sign-up": "Đăng ký tài khoản"
+    }
+  }
+}

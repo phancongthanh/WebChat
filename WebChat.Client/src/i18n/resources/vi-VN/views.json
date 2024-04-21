@@ -1,0 +1,71 @@
+{
+  "chat-bar": {
+    "placeholder": "Gửi một tin nhắn!",
+    "send": "Gửi",
+    "emoji": "Gửi Emoji",
+    "send-photos": "Gửi hình ảnh",
+    "attach-file": "Đính kèm File"
+  },
+  "chat-guide": "Chào, đây là hội thoại nhắn tin. Bạn có thể nhắn tin bằng văn bản, emoji, file và ảnh bằng máy tính và điện thoại của bạn thông qua hội thoại này.",
+  "chat-message": {
+    "hide-message": "Ẩn tin nhắn",
+    "delete-message": "Xóa tin nhắn",
+    "hidden-confirm": "Bạn có chắc chắn muốn ẩn tin nhắn? Tin nhắn chỉ bị xóa đối với bạn!",
+    "deleted-confirm": "Bạn có chắc chắn muốn xóa tin nhắn? Tin nhắn sẽ xóa ở tất cả mọi người!",
+    "deleted-message": "Tin nhắn đã bị xóa!"
+  },
+  "add-friend-dialog": {
+    "title": "Thêm bạn",
+    "text": "Gửi lời mời đến bạn của bạn!",
+    "fields": {
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "default-title": "Chào bạn!",
+      "default-description": "Mình là {{name}}, hãy kết bạn nhé!",
+      "required-title": "Tiêu đề không được để trống",
+      "required-description": "Mô tả không được để trống"
+    }
+  },
+  "delete-conversation-confirm": {
+    "content": "Bạn có chắc muốn xóa hết các tin nhắn trong cuộc hội thoại này không?",
+    "delete": "Xóa tin nhắn"
+  },
+  "delete-friend-confirm": {
+    "delete": "Bạn có chắc chắn muốn hủy kết bạn với \"{{name}}\"?",
+    "undo": "Bạn có chắc chắn muốn thu hồi lời mời kết bạn với \"{{name}}\"?",
+    "reject": "Bạn có chắc chắn muốn từ chối lời mời kết bạn với \"{{name}}\"?"
+  },
+  "leave-group-confirm": {
+    "leave": "Bạn có chắc chắn muốn rời nhóm \"{{name}}\"?",
+    "undo": "Bạn có chắc chắn muốn thu hồi yêu cầu xin vào nhóm \"{{name}}\"?",
+    "reject": "Bạn có chắc chắn muốn từ chối lời mời vào nhóm \"{{name}}\"?"
+  },
+  "set-alias-dialog": {
+    "title": "Đặt tên gợi nhớ",
+    "description": {
+      "first": "Hãy đặt cho ",
+      "last": " một cái tên dễ nhớ."
+    },
+    "notice": "Lưu ý: Tên gợi nhớ sẽ chỉ hiển thị riêng với bạn.",
+    "fields": {
+      "alias": "Tên gợi nhớ",
+      "required-alias": "Tên gợi nhớ không được để trống",
+      "invalid-alias": "Tên gợi nhớ không hợp lệ"
+    },
+    "btns": {
+      "set": "Đặt",
+      "reset": "Hủy tên gợi nhớ"
+    }
+  },
+  "update-group-name-dialog": {
+    "title": "Đặt tên nhóm",
+    "name": "Tên nhóm",
+    "required-name": "Tên nhóm không được để trống",
+    "invalid-name": "Tên nhóm không hợp lệ",
+    "description": {
+      "first": "Hãy đặt tên mới cho nhóm ",
+      "last": "."
+    },
+    "notice": "Lưu ý: Tên nhóm sẽ hiển thị với mọi người."
+  }
+}

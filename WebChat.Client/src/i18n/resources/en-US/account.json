@@ -1,0 +1,30 @@
+{
+  "title": {
+    "sign-up": "Sign up to WebChat account",
+    "login": "Sign in to WebChat account",
+    "forgot": "Recover password WebChat"
+  },
+  "header": {
+    "first": "Sign in to account",
+    "last": "to connect to WebChat"
+  },
+  "tabs": {
+    "sign-up": "Sign up",
+    "login": "Login"
+  },
+  "forgot": {
+    "title": "Enter the phone number to receive the authentication code",
+    "error-message": "The feature is not available!\nYou may not remember the password due to pressure, Please relax and try again next time, thanks!",
+    "btn": {
+      "next": "Continue",
+      "back": "Back"
+    }
+  },
+  "login": {
+    "hasFaliedLogin": "Phone number or password does not match, please re-enter",
+    "btns": {
+      "submit": "Login with password",
+      "forgot": "Forgot password?"
+    }
+  }
+}

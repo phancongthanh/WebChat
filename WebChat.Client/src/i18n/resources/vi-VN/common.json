@@ -1,0 +1,71 @@
+{
+  "language": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "feature": {
+    "unavaliable": "Chức năng chưa có sẵn!"
+  },
+  "gender": {
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ"
+  },
+  "message-status": {
+    "sending": "Đang gửi",
+    "sent": "Đã gửi",
+    "received": "Đã nhận",
+    "seen": "Đã xem"
+  },
+  "member-role": {
+    "is-block": "Bị chặn",
+    "member": "Thành viên",
+    "deputy-group": "Phó nhóm",
+    "leader": "Trưởng nhóm"
+  },
+  "password": {
+    "invalid": "Mật khẩu phải có tối thiểu tám ký tự, ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt {{chars}}.",
+    "required": "Mật khẩu không được bỏ trống.",
+    "requireUppercase": "Mật khẩu phải chứa ít nhất 1 ký tự hoa.",
+    "requireLowercase": "Mật khẩu phải chứa ít nhất 1 ký tự thường.",
+    "requireDigit": "Mật khẩu phải chứa ít nhất 1 chữ số.",
+    "requiredUniqueChars": "Mật khẩu phải chứa ít nhất một ký tự đặc biệt: {{chars}}.",
+    "minLength": "Mật khẩu phải dài tối thiểu {{length}} ký tự.",
+    "confirm": "Mật khẩu mới và mật khẩu xác nhận không giống nhau."
+  },
+  "btns": {
+    "close": "Đóng",
+    "ok": "Ok",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy",
+    "agree": "Đồng ý",
+    "deny": "Từ chối",
+    "reject": "Từ chối",
+    "accept": "Đồng ý",
+    "leave-group": "Rời nhóm",
+    "delete-friend": "Xóa bạn",
+    "delete": "Xóa",
+    "update": "Cập nhật",
+    "edit": "Chỉnh sửa",
+    "chat": "Nhắn tin",
+    "block": "Chặn",
+    "unblock": "Bỏ chặn",
+    "hide": "Ẩn",
+    "undo": "Thu hồi",
+    "kick-member": "Xóa khỏi nhóm",
+    "search": "Tìm kiếm",
+    "join-group": "Tham gia",
+    "send-group-request": "Yêu cầu tham gia",
+    "reject-group-invitation": "Từ chối lời mời",
+    "send": "Gửi",
+    "reload": "Tải lại",
+    "add-friend": "Thêm bạn",
+    "create-group": "Tạo nhóm",
+    "logout": "Đăng xuất",
+    "reply": "Trả lời"
+  },
+  "phone": {
+    "country-code": "Mã quốc gia",
+    "number": "Số điện thoại"
+  }
+}

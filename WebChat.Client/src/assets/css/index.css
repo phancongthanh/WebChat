@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family:
+    Roboto,
+    Tahoma,
+    Microsoft Sans Serif,
+    Arial,
+    sans-serif;
+}
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+html,
+body,
+#root {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.disable-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+.normal-scroll-bar::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.normal-scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: gray;
+}
+.normal-scroll-bar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.hover-scroll-bar::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.hover-scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: transparent;
+}
+.hover-scroll-bar:hover::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: gray;
+}
+.hover-scroll-bar::-webkit-scrollbar-track {
+  background: transparent;
+}
+em-emoji {
+  vertical-align: middle;
+}
