@@ -35,6 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\ErrorResource.Designer.cs">
       <DependentUpon>ErrorResource.resx</DependentUpon>
       <DesignTime>True</DesignTime>
