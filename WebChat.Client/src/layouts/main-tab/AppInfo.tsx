@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import { Box, List, ListItem, Modal, Paper, SxProps, Typography } from "@mui/material";
+import { SystemInfo } from "../../types/SystemInfo";
+import { RootState } from "../../store";
 
 const style: SxProps = {
   position: "absolute",
@@ -17,6 +20,7 @@ const style: SxProps = {
 
 export default function AppInfo({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { t } = useTranslation();
+  const systemInfo = useSelector<RootState, SystemInfo>((state) => state.system);
   return (
     <Modal open={open} onClose={onClose}>
       <Paper sx={style}>
@@ -25,12 +29,24 @@ export default function AppInfo({ open, onClose }: { open: boolean; onClose: () 
         </Box>
         <List>
           <ListItem>
+            <Typography>{t("app-info.fields.app-name", { ns: "layout" })}</Typography>
+            <Typography>{systemInfo.appName}</Typography>
+          </ListItem>
+          <ListItem>
             <Typography>{t("app-info.fields.version", { ns: "layout" })}</Typography>
-            <Typography>{t("app-info.values.version", { ns: "layout" })}</Typography>
+            <Typography>{systemInfo.version}</Typography>
+          </ListItem>
+          <ListItem>
+            <Typography>{t("app-info.fields.phone", { ns: "layout" })}</Typography>
+            <Typography>{systemInfo.adminPhone.toString()}</Typography>
           </ListItem>
           <ListItem>
             <Typography>{t("app-info.fields.email", { ns: "layout" })}</Typography>
-            <Typography>{t("app-info.values.email", { ns: "layout" })}</Typography>
+            <Typography>{systemInfo.email}</Typography>
+          </ListItem>
+          <ListItem>
+            <Typography>{t("app-info.fields.group-code", { ns: "layout" })}</Typography>
+            <Typography>{systemInfo.globalGroupCode}</Typography>
           </ListItem>
         </List>
       </Paper>

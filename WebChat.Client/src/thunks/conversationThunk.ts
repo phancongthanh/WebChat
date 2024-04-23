@@ -12,33 +12,34 @@ export const sendMessage = createAsyncThunk<
   { conversationId: string; text: string; files?: File[] },
   { state: RootState; dispatch: AppDispatch }
 >("thunk/conversation/sendMessage", async ({ conversationId, text, files }, { getState, dispatch }) => {
+  const userId = getState().auth.userId;
+  const message: Message = {
+    conversationId,
+    messageId: Math.random() * 1e6,
+    isDeleted: false,
+    fromUserId: userId,
+    sendTime: new Date(),
+    status: MessageStatus.Sending,
+    text,
+    files:
+      files?.map((f) => ({
+        path: "",
+        name: f.name,
+        size: f.size,
+        contentType: f.type,
+        createdDate: new Date(f.lastModified),
+      })) || [],
+  };
+  dispatch(addMessage(message));
   try {
-    const userId = getState().auth.userId;
-    const message: Message = {
-      conversationId,
-      messageId: Math.random() * 1e6,
-      isDeleted: false,
-      fromUserId: userId,
-      sendTime: new Date(),
-      status: MessageStatus.Sending,
-      text,
-      files:
-        files?.map((f) => ({
-          path: "",
-          name: f.name,
-          size: f.size,
-          contentType: f.type,
-          createdDate: new Date(f.lastModified),
-        })) || [],
-    };
-    dispatch(addMessage(message));
     if (files && files.length) await conversationsClient.sendMessage(conversationId, text, files);
     else dispatch(sendTextMessage({ conversationId, message: text }));
-    dispatch(deleteMessage(message));
     return true;
   } catch (e) {
     dispatch(showError(e));
     return false;
+  } finally {
+    dispatch(deleteMessage(message));
   }
 });
 

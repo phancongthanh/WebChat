@@ -18,12 +18,13 @@
   "app-info": {
     "title": "WebChat",
     "fields": {
+      "app-name": "Tên ứng dụng",
       "version": "Phiên bản:",
-      "email": "Email:"
-    },
-    "values": {
-      "version": "0.4.0",
-      "email": "phancongthanhvtvpvn@gmail.com"
+      "email": "Email:",
+      "phone": "Số điện thoại",
+      "group-code": "Mã nhóm chung",
+      "max-file-size": "Dung lượng file tối đa",
+      "max-file-per-message": "Số file trên một tin nhắn"
     }
   },
   "logout-confirm": "Bạn có chắc chắn muốn đăng xuất khỏi tải khoản?",

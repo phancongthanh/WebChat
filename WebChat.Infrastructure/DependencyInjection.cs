@@ -19,6 +19,10 @@ public static class DependencyInjection
         services.AddSingleton(TimeProvider.System);
         services.AddDistributedMemoryCache();
 
+        services.AddOptions<SystemInfoOptions>()
+            .Bind(configuration.GetSection(SystemInfoOptions.SectionName));
+        services.AddTransient(sp => sp.GetRequiredService<IOptions<SystemInfoOptions>>().Value);
+
         services.AddOptions<FileStoreOptions>()
             .Bind(configuration.GetSection(FileStoreOptions.SectionName));
         services.AddTransient(sp => sp.GetRequiredService<IOptions<FileStoreOptions>>().Value);
@@ -62,8 +66,8 @@ public static class DependencyInjection
         .AddJwtBearer(options =>
         {
             configuration.Bind("JwtSettings", options);
-            var key = Encoding.UTF8.GetBytes(configuration["JwtSettings:SecurityKey"]
-                ?? throw new ArgumentNullException("JwtSettings:SecurityKey"));
+            var key = Encoding.UTF8.GetBytes(configuration["SecurityKey"]
+                ?? throw new ArgumentNullException("SecurityKey"));
             options.TokenValidationParameters.IssuerSigningKey = new SymmetricSecurityKey(key);
             options.Events = new JwtBearerEvents
             {

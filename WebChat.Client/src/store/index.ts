@@ -6,10 +6,12 @@ import errorReducer from "./errorSlice";
 import groupsReducer from "./groupsSlice";
 import socket from "./middlewares/socket-middleware";
 import notificationsReducer from "./notificationsSlice";
+import systemReducer from "./systemSlice";
 import usersReducer from "./usersSlice";
 
 const store = configureStore({
   reducer: combineReducers({
+    system: systemReducer,
     error: errorReducer,
     auth: authReducer,
     users: usersReducer,

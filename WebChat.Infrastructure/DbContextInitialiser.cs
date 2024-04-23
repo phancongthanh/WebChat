@@ -24,6 +24,7 @@ public static class InitialiserExtensions
 }
 
 public class DbContextInitialiser(
+    SystemInfoOptions systemInfo,
     ILogger<DbContextInitialiser> logger,
     ApplicationDbContext context,
     AppIdentityDbContext appIdentityDbContext,
@@ -63,10 +64,7 @@ public class DbContextInitialiser(
     public async Task TrySeedAsync()
     {
         // Default
-        var adminPhone = PhoneNumber.From("84", "0382441609");
         var password = "Test@123";
-        var groupName = "WebChat";
-        var groupCode = "WebChat";
         // Default roles
         if (roleManager.Roles.All(r => r.Name != Roles.Administrator))
         {
@@ -82,7 +80,7 @@ public class DbContextInitialiser(
                     Name = "Administrator",
                     Birthday = new DateTime(2002, 09, 16, 0, 0, 0, DateTimeKind.Local),
                     Gender = Gender.Male,
-                    PhoneNumber = adminPhone,
+                    PhoneNumber = systemInfo.AdminPhone,
                     ConversationId = Guid.NewGuid(),
                 },
                 new() {
@@ -108,7 +106,7 @@ public class DbContextInitialiser(
                 var phone = user.PhoneNumber.ToString();
                 var admin = new ApplicationUser { UserName = phone, PhoneNumber = phone };
                 await userManager.CreateAsync(admin, password);
-                if (adminPhone == user.PhoneNumber)
+                if (systemInfo.AdminPhone == user.PhoneNumber)
                     await userManager.AddToRoleAsync(admin, Roles.Administrator);
                 user.UserId = admin.Id;
                 // Create cloud conversation
@@ -135,7 +133,7 @@ public class DbContextInitialiser(
         if (!context.Friendships.Any())
         {
             var users = await context.Users.ToListAsync();
-            var admin = users.Where(u => u.PhoneNumber == adminPhone).Single();
+            var admin = users.Where(u => u.PhoneNumber == systemInfo.AdminPhone).Single();
             users.Remove(admin);
             foreach (var user in users)
             {
@@ -184,8 +182,8 @@ public class DbContextInitialiser(
         if (!context.Groups.Any())
         {
             var admin = await context.Users
-                .Where(u => u.PhoneNumber.CountryCode == adminPhone.CountryCode
-                    && u.PhoneNumber.SubscriberNumber == adminPhone.SubscriberNumber)
+                .Where(u => u.PhoneNumber.CountryCode == systemInfo.AdminPhone.CountryCode
+                    && u.PhoneNumber.SubscriberNumber == systemInfo.AdminPhone.SubscriberNumber)
                 .SingleAsync();
             var memberIds = await context.Friendships
                 .Where(f => f.UserId == admin.UserId)
@@ -206,10 +204,10 @@ public class DbContextInitialiser(
             var group = new Group()
             {
                 GroupId = groupId,
-                Name = groupName,
+                Name = systemInfo.AppName,
                 ConversationId = conversationId
             };
-            group.Setting.GroupCode = groupCode;
+            group.Setting.GroupCode = systemInfo.GlobalGroupCode;
             group.Members.Add(new GroupMember() { Role = MemberRole.Leader, UserId = admin.UserId });
             foreach (var memberId in memberIds)
                 group.Members.Add(new GroupMember() { Role = MemberRole.Member, UserId = memberId });

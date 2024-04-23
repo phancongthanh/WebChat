@@ -11,7 +11,7 @@ export interface AuthState {
   conversationId: string;
 }
 
-const initUsers: AuthState = {
+const initAuth: AuthState = {
   userId: "",
   name: "",
   gender: Gender.NotKnown,
@@ -25,7 +25,7 @@ const initUsers: AuthState = {
 
 const authSlice = createSlice({
   name: "auth",
-  initialState: initUsers,
+  initialState: initAuth,
   reducers: {
     setAuth: (_, action: PayloadAction<AuthState>) => action.payload,
   },

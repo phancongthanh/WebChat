@@ -19,5 +19,6 @@ export * from './apis/avatars-api';
 export * from './apis/conversations-api';
 export * from './apis/friends-api';
 export * from './apis/groups-api';
+export * from './apis/system-info-api';
 export * from './apis/users-api';
 

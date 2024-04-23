@@ -1,7 +1,10 @@
 import { ChangeEvent, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, IconButton, List, Popover, Stack, TextareaAutosize, Tooltip } from "@mui/material";
+import { SystemInfo } from "../../../types/SystemInfo";
+import { RootState } from "../../../store";
 import SquareIcon from "../../../components/SquareIcon";
 import EmojiPicker, { EmojiProps } from "../../../components/emoji/EmojiPicker";
 import FileItem from "./FileItem";
@@ -11,16 +14,19 @@ export default function ChatBar({
   onSend,
 }: {
   placeholder?: string;
-  onSend?: (text: string, files: File[]) => Promise<unknown> | unknown;
+  onSend: (text: string, files: File[]) => Promise<unknown> | unknown;
 }) {
   const { t } = useTranslation();
+  const { maxFileSize, maxFileCountPerMessage } = useSelector<RootState, SystemInfo>((state) => state.system);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const [text, setText] = useState<string>("");
   const [files, setFiles] = useState<File[]>([]);
   const [isLoading, setLoading] = useState(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  const isValid = onSend && !isLoading && (text || files.length);
+  const isValid = files.length
+    ? files.length <= maxFileCountPerMessage && files.every((f) => f.size <= maxFileSize * 1024 * 1024)
+    : text;
 
   function handleUploadFile(e: ChangeEvent<HTMLInputElement>) {
     const fs = e.target.files;
@@ -95,9 +101,15 @@ export default function ChatBar({
             </SquareIcon>
           </label>
         </Tooltip>
-        <Tooltip title={t("chat-bar.send", { ns: "views" })}>
+        <Tooltip
+          title={
+            files.length <= maxFileCountPerMessage
+              ? t("chat-bar.send", { ns: "views" })
+              : t("chat-bar.too-many-files", { ns: "views", count: maxFileCountPerMessage })
+          }
+        >
           <Box>
-            <IconButton className="hover:text-blue-500 text-inherit" disabled={!isValid} onClick={send}>
+            <IconButton className="hover:text-blue-500 text-inherit" disabled={!isValid || isLoading} onClick={send}>
               <SquareIcon>
                 <FontAwesomeIcon icon={["far", "paper-plane"]} />
               </SquareIcon>

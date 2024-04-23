@@ -61,6 +61,15 @@ namespace WebChat.Application.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tệp tin.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Người dùng không thể xóa tin nhắn của người khác.
         /// </summary>
         public static string IsNotSender {
@@ -75,6 +84,24 @@ namespace WebChat.Application.Common.Resources {
         public static string Message {
             get {
                 return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tệp tin dung lượng quá lớn.
+        /// </summary>
+        public static string TooLargeFileSize {
+            get {
+                return ResourceManager.GetString("TooLargeFileSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Có quá nhiều tệp tin trong một tin nhắn.
+        /// </summary>
+        public static string TooManyFiles {
+            get {
+                return ResourceManager.GetString("TooManyFiles", resourceCulture);
             }
         }
     }

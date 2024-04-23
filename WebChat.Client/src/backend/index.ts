@@ -4,8 +4,9 @@ import AvatarsClient from "./clients/avatars-client";
 import ConversationsClient from "./clients/conversations-client";
 import FriendsClient from "./clients/friends-client";
 import GroupsClient from "./clients/groups-client";
+import SystemClient from "./clients/system-client";
 import UsersClient from "./clients/users-client";
-import { AvatarsApi, Configuration, ConversationsApi, FriendsApi, GroupsApi, UsersApi } from "./openapi";
+import { AvatarsApi, Configuration, ConversationsApi, FriendsApi, GroupsApi, SystemInfoApi, UsersApi } from "./openapi";
 import SignalRSocket from "./sockets/SignalRSocket";
 
 // configuration
@@ -21,6 +22,7 @@ const avatarsApi = new AvatarsApi(configuration, basePath, axiosClient);
 const friendsApi = new FriendsApi(configuration, basePath, axiosClient);
 const groupsApi = new GroupsApi(configuration, basePath, axiosClient);
 const conversationaApi = new ConversationsApi(configuration, basePath, axiosClient);
+const systemInfoApi = new SystemInfoApi(configuration, basePath, axiosClient);
 
 // clients
 export const usersClient = new UsersClient(usersApi);
@@ -28,6 +30,7 @@ export const avatarsClient = new AvatarsClient(avatarsApi, configuration);
 export const friendsClient = new FriendsClient(friendsApi);
 export const groupsClient = new GroupsClient(groupsApi);
 export const conversationsClient = new ConversationsClient(conversationaApi);
+export const systemClient = new SystemClient(systemInfoApi);
 
 // socket
 export const socket = new SignalRSocket("/hub/Application", auth.getAccessToken);

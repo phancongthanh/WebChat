@@ -16,6 +16,7 @@ export * from "./message";
 export * from "./message-status";
 export * from "./phone-number";
 export * from "./register-request";
+export * from "./system-info-options";
 export * from "./update-friend-info-command";
 export * from "./update-user-command";
 export * from "./user";

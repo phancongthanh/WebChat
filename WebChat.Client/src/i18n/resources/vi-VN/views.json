@@ -4,7 +4,9 @@
     "send": "Gửi",
     "emoji": "Gửi Emoji",
     "send-photos": "Gửi hình ảnh",
-    "attach-file": "Đính kèm File"
+    "attach-file": "Đính kèm File",
+    "too-large-size": "Dung lượng tệp tin quá lớn",
+    "too-many-files": "Chỉ được phép gửi {{count}} tệp tin"
   },
   "chat-guide": "Chào, đây là hội thoại nhắn tin. Bạn có thể nhắn tin bằng văn bản, emoji, file và ảnh bằng máy tính và điện thoại của bạn thông qua hội thoại này.",
   "chat-message": {

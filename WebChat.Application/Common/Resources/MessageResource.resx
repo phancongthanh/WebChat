@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="File" xml:space="preserve">
+    <value>Tệp tin</value>
+  </data>
   <data name="IsNotSender" xml:space="preserve">
     <value>Người dùng không thể xóa tin nhắn của người khác</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>Tin nhắn</value>
+  </data>
+  <data name="TooLargeFileSize" xml:space="preserve">
+    <value>Tệp tin dung lượng quá lớn</value>
+  </data>
+  <data name="TooManyFiles" xml:space="preserve">
+    <value>Có quá nhiều tệp tin trong một tin nhắn</value>
   </data>
 </root>
