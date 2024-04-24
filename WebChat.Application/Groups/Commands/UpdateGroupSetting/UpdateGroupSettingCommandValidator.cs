@@ -7,17 +7,17 @@ public class UpdateGroupSettingCommandValidator : AbstractValidator<UpdateGroupS
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.GroupId)
             .NotEmpty()
-            .OverridePropertyName(GroupResource.GroupId)
+            .WithName(GroupResource.GroupId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.Setting.GroupCode)
             .Matches(new Regex("^\\w{4,10}$"))
-            .OverridePropertyName(GroupResource.GroupCode)
+            .WithName(GroupResource.GroupCode)
             .WithMessage(GroupResource.InvalidGroupCode);
     }
 }

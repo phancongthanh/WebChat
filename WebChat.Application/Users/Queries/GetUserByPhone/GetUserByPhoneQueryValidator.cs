@@ -6,12 +6,12 @@ internal class GetUserByPhoneQueryValidator : AbstractValidator<GetUserByPhoneQu
         RuleFor(v => v.CountryCode)
             .NotEmpty()
             .Matches("^\\d{1,3}$")
-            .OverridePropertyName(PhoneNumberResource.CountryCode)
+            .WithName(PhoneNumberResource.CountryCode)
             .WithMessage(PhoneNumberResource.InvalidCountryCode);
         RuleFor(v => v.PhoneNumber)
             .NotEmpty()
             .Matches("^\\d{7,15}$")
-            .OverridePropertyName(PhoneNumberResource.SubcriberNumber)
+            .WithName(PhoneNumberResource.SubcriberNumber)
             .WithMessage(PhoneNumberResource.InvalidSubcriberNumber);
     }
 }

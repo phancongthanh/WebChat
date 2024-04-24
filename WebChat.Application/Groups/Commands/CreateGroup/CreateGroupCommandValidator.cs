@@ -5,17 +5,17 @@ public class CreateGroupCommandValidator : AbstractValidator<CreateGroupCommand>
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.GroupName)
             .NotEmpty()
-            .OverridePropertyName(GroupResource.GroupName)
+            .WithName(GroupResource.GroupName)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.MemberIds.Count(id => id != v.CurrentUserId))
             .GreaterThanOrEqualTo(2)
-            .OverridePropertyName(GroupResource.Member)
+            .WithName(GroupResource.Member)
             .WithMessage(GroupResource.NotEnoughMembers);
     }
 }

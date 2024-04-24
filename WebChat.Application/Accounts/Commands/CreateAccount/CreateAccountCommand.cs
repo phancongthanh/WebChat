@@ -29,7 +29,9 @@ public class CreateAccountCommandHandler(IUnitOfWork unitOfWork,
 
         // Domain validate
         if (existedUser != null)
-            throw new ConflictException(UserResource.User, phone.ToString());
+            throw new ConflictException(UserResource.User, phone.ToString())
+                .WithDetail(UserResource.UserAlreadyExists)
+                .WithCode(nameof(UserResource.UserAlreadyExists));
         
         // Create account
         var userId = await identityService.CreateUserAsync(phone.ToString(), request.Password);

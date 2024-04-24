@@ -15,6 +15,8 @@ public class GetGroupAvatarQueryHandler(IGroupRepository repository, IFileStore 
 
         var file = await fileStore.GetAsync(path, cancellationToken);
 
-        return file ?? throw new NotFoundException(path, GroupResource.AvatarPath);
+        return file ?? throw new NotFoundException(path, nameof(GroupResource.AvatarPath))
+            .WithDetail(GroupResource.NotFoundAvatar)
+            .WithCode(nameof(GroupResource.NotFoundAvatar));
     }
 }

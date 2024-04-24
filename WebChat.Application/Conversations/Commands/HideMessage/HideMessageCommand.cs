@@ -22,7 +22,9 @@ public class HideMessageCommandHandler(IConversationRepository repository) : IRe
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
 
         // Update data
         member.HiddenMessageIds.Add(request.MessageId);

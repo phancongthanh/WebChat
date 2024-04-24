@@ -19,6 +19,8 @@ public class GetUserAvatarQueryHandler(IUserRepository repository, IFileStore fi
 
         var file = await _fileStore.GetAsync(path, cancellationToken);
 
-        return file ?? throw new NotFoundException(path, UserResource.AvatarPath);
+        return file ?? throw new NotFoundException(path, nameof(UserResource.AvatarPath))
+            .WithDetail(UserResource.NotFoundAvatar)
+            .WithCode(nameof(UserResource.NotFoundAvatar));
     }
 }

@@ -21,9 +21,13 @@ public class DeleteGroupCommandHandler(
         var group = await groupRepository.GetAsync(request.GroupId, cancellationToken: cancellationToken);
         var member = group.Members.SingleOrDefault(m => m.UserId == request.CurrentUserId);
         if (member == null)
-            throw new ForbiddenAccessException(GroupResource.IsNotMember);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotMember)
+                .WithCode(nameof(GroupResource.IsNotMember));
         else if (!member.Role.IsAdmin())
-            throw new ForbiddenAccessException(GroupResource.IsNotAdmin);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotAdmin)
+                .WithCode(nameof(GroupResource.IsNotAdmin));
 
         // Delete group
         group.AddDomainEvent(new GroupDeletedEvent(group));

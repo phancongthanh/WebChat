@@ -19,7 +19,9 @@ public class JoinGroupCommandHandler(IGroupRepository groupRepository, IConversa
 
         // Domain validation
         if (group.Setting.MembershipApproval || !group.Setting.JoinGroupByLink)
-            throw new ForbiddenAccessException(GroupResource.NotAllowJoinByLink);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.NotAllowJoinByLink)
+                .WithCode(nameof(GroupResource.NotAllowJoinByLink));
 
         // Update data
         var joinRequest = group.JoinRequests.Where(r => r.UserId == request.CurrentUserId).FirstOrDefault();

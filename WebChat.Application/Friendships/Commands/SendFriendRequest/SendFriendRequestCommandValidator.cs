@@ -5,22 +5,22 @@ public class SendFriendRequestCommandValidator : AbstractValidator<SendFriendReq
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(FriendResource.UserId)
+            .WithName(FriendResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.FriendId)
             .NotEmpty()
-            .OverridePropertyName(FriendResource.FriendId)
+            .WithName(FriendResource.FriendId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.RequestTitle)
             .NotNull()
-            .OverridePropertyName(FriendResource.FriendRequestTitle)
+            .WithName(FriendResource.FriendRequestTitle)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.Description)
             .NotNull()
-            .OverridePropertyName(FriendResource.FriendDescription)
+            .WithName(FriendResource.FriendDescription)
             .WithMessage(ValidationResource.Required);
     }
 }

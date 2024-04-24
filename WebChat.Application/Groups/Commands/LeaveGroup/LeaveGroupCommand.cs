@@ -16,9 +16,13 @@ public class LeaveGroupCommandHandler(IGroupRepository groupRepository, IConvers
     {
         var group = await groupRepository.GetAsync(request.GroupId, cancellationToken);
         var member = group.Members.SingleOrDefault(m => m.UserId == request.CurrentUserId)
-            ?? throw new ForbiddenAccessException(GroupResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+            .WithDetail(GroupResource.IsNotMember)
+            .WithCode(nameof(GroupResource.IsNotMember));
         if (member.Role == MemberRole.Leader && group.Members.Where(m => m.Role == MemberRole.Leader).Count() <= 1)
-            throw new ValidationException(GroupResource.Member, GroupResource.LeaderCantLeave);
+            throw new ValidationException()
+                .WithDetail(GroupResource.LeaderCantLeave)
+                .WithCode(nameof(GroupResource.LeaderCantLeave));
         var conversation = await conversationRepository.GetAsync(group.ConversationId, cancellationToken);
         var conversationMember = conversation.Members.SingleOrDefault(m => m.UserId == request.CurrentUserId);
 

@@ -21,7 +21,9 @@ public class LoadMessagesQueryHandler(IConversationRepository repository) : IReq
     {
         var conversation = await repository.GetWithoutMessagesAsync(request.ConversationId, cancellationToken);
         var member = conversation.Members.Where(m => m.UserId == request.CurrentUserId).SingleOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
         
         var messages = await repository
             .GetMessageListAsync(

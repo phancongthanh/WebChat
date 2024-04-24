@@ -5,17 +5,17 @@ public class UpdateGroupAvatarCommandValidator : AbstractValidator<UpdateGroupAv
     {
         RuleFor(v => v.GroupId)
             .NotEmpty()
-            .OverridePropertyName(GroupResource.GroupId)
+            .WithName(GroupResource.GroupId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.File)
             .Must(file => file.CanRead)
-            .OverridePropertyName(GroupResource.AvatarPath)
+            .WithName(GroupResource.AvatarPath)
             .WithMessage(FileResource.CantRead);
     }
 }

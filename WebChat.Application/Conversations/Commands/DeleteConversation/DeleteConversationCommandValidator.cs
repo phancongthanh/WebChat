@@ -5,12 +5,12 @@ public class DeleteConversationCommandValidator : AbstractValidator<DeleteConver
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.ConversationId)
             .NotEmpty()
-            .OverridePropertyName(ConversationResource.Conversation)
+            .WithName(ConversationResource.Conversation)
             .WithMessage(ValidationResource.Required);
     }
 }

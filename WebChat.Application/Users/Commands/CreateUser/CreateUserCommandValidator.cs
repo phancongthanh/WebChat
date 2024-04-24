@@ -5,37 +5,37 @@ public class CreateAccountUserValidator : AbstractValidator<CreateUserCommand>
     {
         RuleFor(v => v.UserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.Name)
             .NotEmpty()
-            .OverridePropertyName(UserResource.Name)
+            .WithName(UserResource.Name)
             .WithMessage(ValidationResource.Required);
         RuleFor(v => v.Name)
             .MaximumLength(50)
-            .OverridePropertyName(UserResource.Name)
+            .WithName(UserResource.Name)
             .WithMessage(ValidationResource.MaxLength);
 
         RuleFor(v => v.Birthday)
             .LessThan(DateTimeOffset.Now)
-            .OverridePropertyName(UserResource.Birthday)
+            .WithName(UserResource.Birthday)
             .WithMessage(ValidationResource.InvalidBirthday);
 
         RuleFor(v => v.Gender)
             .IsInEnum()
-            .OverridePropertyName(UserResource.Gender)
+            .WithName(UserResource.Gender)
             .WithMessage(ValidationResource.InvalidGender);
 
         RuleFor(v => v.CountryCode)
             .NotEmpty()
             .Matches("^\\d{1,3}$")
-            .OverridePropertyName(PhoneNumberResource.CountryCode)
+            .WithName(PhoneNumberResource.CountryCode)
             .WithMessage(PhoneNumberResource.InvalidCountryCode);
         RuleFor(v => v.PhoneNumber)
             .NotEmpty()
             .Matches("^\\d{7,15}$")
-            .OverridePropertyName(PhoneNumberResource.SubcriberNumber)
+            .WithName(PhoneNumberResource.SubcriberNumber)
             .WithMessage(PhoneNumberResource.InvalidSubcriberNumber);
     }
 }

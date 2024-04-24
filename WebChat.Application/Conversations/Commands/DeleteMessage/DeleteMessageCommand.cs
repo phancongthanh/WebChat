@@ -25,9 +25,13 @@ public class DeleteMessageCommandHandler(IConversationRepository repository) : I
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
         if (message.FromUserId != request.CurrentUserId)
-            throw new ForbiddenAccessException(MessageResource.IsNotSender);
+            throw new ForbiddenAccessException()
+                .WithDetail(MessageResource.IsNotSender)
+                .WithCode(nameof(MessageResource.IsNotSender));
 
         // Create domain event
         var domainEvent = new MessageDeletedEvent(request.ConversationId, request.MessageId);

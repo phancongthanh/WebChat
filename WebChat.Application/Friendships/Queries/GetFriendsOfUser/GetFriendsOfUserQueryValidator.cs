@@ -5,7 +5,7 @@ public class GetFriendsOfUserQueryValidator : AbstractValidator<GetFriendsOfUser
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
     }
 }

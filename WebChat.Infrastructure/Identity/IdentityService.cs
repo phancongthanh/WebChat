@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebChat.Application.Common.Exceptions;
+using WebChat.Domain.Extensions;
 
 namespace WebChat.Infrastructure.Identity;
 public class IdentityService(
@@ -32,7 +33,9 @@ public class IdentityService(
         var user = await userManager.Users
             .Where(x => x.UserName == userName)
             .SingleOrDefaultAsync()
-            ?? throw new ValidationException(IdentityResource.Account, IdentityResource.AccountNotExist);
+            ?? throw new ValidationException()
+                .WithDetail(IdentityResource.AccountNotExist)
+                .WithCode(nameof(IdentityResource.AccountNotExist));
 
         await userManager.ChangePasswordAsync(user, oldPassword, newPassword);
     }

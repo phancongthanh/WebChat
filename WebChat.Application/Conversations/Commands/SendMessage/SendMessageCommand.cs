@@ -25,9 +25,13 @@ public class SendMessageCommandHandler(IConversationRepository repository, IFile
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
         if (member.IsBlock)
-            throw new ForbiddenAccessException(ConversationResource.IsBlock);
+            throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsBlock)
+                .WithCode(nameof(ConversationResource.IsBlock));
 
         // Save files
         var files = new List<FileMetadata>();

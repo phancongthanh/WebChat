@@ -20,9 +20,13 @@ public class UpdateGroupNameCommandHandler(IGroupRepository repository)
 
         // Domain validation
         if (member == null)
-            throw new ForbiddenAccessException(GroupResource.IsNotMember);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotMember)
+                .WithCode(nameof(GroupResource.IsNotMember));
         else if (!member.Role.IsAdmin() && !group.Setting.AllowChangeGName)
-            throw new ForbiddenAccessException(GroupResource.IsNotAdmin);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotAdmin)
+                .WithCode(nameof(GroupResource.IsNotAdmin));
 
         // Update data
         group.Name = request.GroupName;

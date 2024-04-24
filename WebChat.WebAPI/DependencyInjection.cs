@@ -41,7 +41,7 @@ public static class DependencyInjection
                 var message = ctx.Exception.Message;
                 ctx.ProblemDetails.Extensions.Add(ErrorConstants.Message, message);
                 var detail = ctx.Exception.Data[ErrorConstants.Detail] as string;
-                if (string.IsNullOrEmpty(detail)) ctx.ProblemDetails.Detail = detail;
+                if (!string.IsNullOrEmpty(detail)) ctx.ProblemDetails.Detail = detail;
             }
         });
         services.AddExceptionHandler<CustomExceptionHandler>();

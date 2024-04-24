@@ -5,7 +5,7 @@ public class GetUserQueryValidator : AbstractValidator<GetUserQuery>
     {
         RuleFor(v => v.UserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
     }
 }

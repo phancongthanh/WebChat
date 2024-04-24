@@ -24,12 +24,15 @@ public class ValidationException : Exception
         Errors = errors;
     }
 
-    public ValidationException(string resourceName, string errorMessage)
-        : this()
+    public ValidationException(string resourceName, string[] messages) : this()
     {
         Errors = new Dictionary<string, string[]>
         {
-            { resourceName, [errorMessage] }
+            { resourceName, messages }
         };
     }
+
+    public ValidationException(string resourceName, string message) : this(resourceName, [message]) { }
+    public ValidationException(string[] messages) : this(string.Empty, messages) { }
+    public ValidationException(string message) : this(string.Empty, message) { }
 }

@@ -27,7 +27,9 @@ public class RejectGroupCommandHandler(IGroupRepository repository) : IRequestHa
         else
         {
             var member = group.Members.SingleOrDefault(m => m.UserId == request.CurrentUserId)
-                ?? throw new ForbiddenAccessException(GroupResource.IsNotMember);
+                ?? throw new ForbiddenAccessException()
+                    .WithDetail(GroupResource.IsNotMember)
+                    .WithCode(nameof(GroupResource.IsNotMember));
             
             if (member.Role.IsAdmin())
             {

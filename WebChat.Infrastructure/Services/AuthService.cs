@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using WebChat.Application.Common.Exceptions;
+using WebChat.Domain.Extensions;
 using WebChat.Infrastructure.Interfaces;
 
 namespace WebChat.Infrastructure.Services;
@@ -40,11 +41,15 @@ internal class AuthService(
         var user = await _userManager.Users
             .Where(x => x.UserName == userName)
             .SingleOrDefaultAsync()
-            ?? throw new ValidationException(IdentityResource.Account, IdentityResource.AccountNotExist);
+            ?? throw new ValidationException()
+                .WithDetail(IdentityResource.AccountNotExist)
+                .WithCode(nameof(IdentityResource.AccountNotExist));
 
         var result = await _userManager.CheckPasswordAsync(user, password);
         if (!result)
-            throw new ValidationException(IdentityResource.Account, IdentityResource.IncorrectPassword);
+            throw new ValidationException()
+                .WithDetail(IdentityResource.IncorrectPassword)
+                .WithCode(nameof(IdentityResource.IncorrectPassword));
 
         // Create token
         var model = new LoginSession()

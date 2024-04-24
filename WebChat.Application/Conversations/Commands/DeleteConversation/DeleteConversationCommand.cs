@@ -20,7 +20,9 @@ public class DeleteConversationCommandHandler(IConversationRepository repository
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+            .WithDetail(ConversationResource.IsNotMember)
+            .WithCode(nameof(ConversationResource.IsNotMember));
 
         // Update data
         member.LoadFromId = conversation.Messages.Max(m => m.MessageId) + 1;

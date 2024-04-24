@@ -25,7 +25,9 @@ public class ReceiveMessageCommandHandler(IConversationRepository repository, IU
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
 
         // Update data
         if (member.ReceivedToId < request.MessageId) member.ReceivedToId = request.MessageId;

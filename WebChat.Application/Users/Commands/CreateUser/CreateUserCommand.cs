@@ -31,7 +31,9 @@ public class CreateUserCommandHandler(IUnitOfWork unitOfWork,
 
         // Domain validate
         if (existedUser != null)
-            throw new ConflictException(UserResource.User, phoneNumber.ToString());
+            throw new ConflictException(UserResource.User, phoneNumber.ToString())
+                .WithDetail(UserResource.UserAlreadyExists)
+                .WithCode(nameof(UserResource.UserAlreadyExists));
 
         // Create cloud conversation
         var conversationId = Guid.NewGuid();

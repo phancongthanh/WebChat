@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using WebChat.Domain.Constants;
 using WebChat.Domain.Exceptions;
 using ValidationException = WebChat.Application.Common.Exceptions.ValidationException;
 
@@ -16,11 +17,16 @@ public class UnhandledExceptionBehaviour<TRequest, TResponse>(ILogger<TRequest> 
         {
             var requestName = typeof(TRequest).Name;
 
-            logger.LogError(ex, "WebChat Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+            if (ex.Data.Contains(ErrorConstants.Detail))
+                logger.LogWarning(ex, "WebChat Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+            else
+                logger.LogError(ex, "WebChat Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
 
             if (ex is InvalidPhoneNumberException)
             {
-                throw new ValidationException(string.Empty, PhoneNumberResource.Invalid);
+                throw new ValidationException()
+                    .WithDetail(PhoneNumberResource.Invalid)
+                    .WithCode(nameof(PhoneNumberResource.Invalid));
             }
 
             throw;

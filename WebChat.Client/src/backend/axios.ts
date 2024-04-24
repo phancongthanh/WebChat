@@ -42,6 +42,7 @@ axiosClient.interceptors.response.use(
       if (!error.response) return Promise.reject(new ConnectionError());
       const response = error.response;
       if (response.status >= 500 || !response.data) return Promise.reject(new ServerError());
+      if (response.status === 401) return Promise.reject(new UnauthorizedError());
       try {
         const body = error.response.data as ProblemDetails;
         const clientError = new ClientError(

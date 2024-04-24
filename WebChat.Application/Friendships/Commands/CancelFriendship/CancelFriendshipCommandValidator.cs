@@ -5,12 +5,12 @@ public class CancelFriendshipCommandValidator : AbstractValidator<CancelFriendsh
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(FriendResource.UserId)
+            .WithName(FriendResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.FriendId)
             .NotEmpty()
-            .OverridePropertyName(FriendResource.FriendId)
+            .WithName(FriendResource.FriendId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v)

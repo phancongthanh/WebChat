@@ -18,7 +18,9 @@ public class GetConversationQueryHandler(IConversationRepository repository) : I
 
         // Domain validate
         if (!conversation.Members.Any(m => m.UserId == request.CurrentUserId))
-            throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
 
         var dto = new ConversationInfo(conversation, request.CurrentUserId);
 

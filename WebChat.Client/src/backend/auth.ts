@@ -78,8 +78,13 @@ export class AuthService {
 
   async checkLogged(): Promise<boolean> {
     try {
-      const accessToken = await this.getAccessToken();
-      return accessToken ? true : false;
+      const loginSession = storage.getLoginSession();
+      if (loginSession && new Date(loginSession.expiresTime) > new Date()) {
+        const session = await this.auths.getAccessToken(loginSession.accessToken, loginSession.refreshToken);
+        storage.setLoginSession(session);
+        return true;
+      }
+      return false;
     } catch (e) {
       return false;
     }

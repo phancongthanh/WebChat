@@ -24,11 +24,15 @@ public class ReadMessageCommandHandler(IConversationRepository repository, IUnit
 
         // Domain validation
         if (conversation.ConversationId != message.ConversationId)
-            throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            throw new ForbiddenAccessException()
+                .WithDetail(ConversationResource.IsNotMember)
+                .WithCode(nameof(ConversationResource.IsNotMember));
         var member = conversation.Members
             .Where(m => m.UserId == request.CurrentUserId)
             .FirstOrDefault()
-            ?? throw new ForbiddenAccessException(ConversationResource.IsNotMember);
+            ?? throw new ForbiddenAccessException()
+            .WithDetail(ConversationResource.IsNotMember)
+            .WithCode(nameof(ConversationResource.IsNotMember));
 
         // Update data
         if (member.SeenToId < request.MessageId) member.SeenToId = request.MessageId;

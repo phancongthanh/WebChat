@@ -21,9 +21,13 @@ public class KickMemberCommandHandler(IUnitOfWork unitOfWork, IGroupRepository g
 
         // Domain validation
         if (admin == null)
-            throw new ForbiddenAccessException(GroupResource.IsNotMember);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotMember)
+                .WithCode(nameof(GroupResource.IsNotMember));
         else if (!admin.Role.IsAdmin())
-            throw new ForbiddenAccessException(GroupResource.IsNotAdmin);
+            throw new ForbiddenAccessException()
+                .WithDetail(GroupResource.IsNotAdmin)
+                .WithCode(nameof(GroupResource.IsNotAdmin));
 
         // Update data
         var conversation = await conversationRepository.GetAsync(group.ConversationId, cancellationToken);

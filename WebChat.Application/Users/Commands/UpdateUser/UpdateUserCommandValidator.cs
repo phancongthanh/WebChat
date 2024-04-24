@@ -6,26 +6,26 @@ public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
     {
         RuleFor(v => v.CurrentUserId)
             .NotEmpty()
-            .OverridePropertyName(UserResource.UserId)
+            .WithName(UserResource.UserId)
             .WithMessage(ValidationResource.Required);
 
         RuleFor(v => v.Name)
             .NotEmpty()
-            .OverridePropertyName(UserResource.Name)
+            .WithName(UserResource.Name)
             .WithMessage(ValidationResource.Required);
         RuleFor(v => v.Name)
             .MaximumLength(50)
-            .OverridePropertyName(UserResource.Name)
+            .WithName(UserResource.Name)
             .WithMessage(ValidationResource.MaxLength);
 
         RuleFor(v => v.Birthday)
             .LessThan(DateTimeOffset.Now)
-            .OverridePropertyName(UserResource.Birthday)
+            .WithName(UserResource.Birthday)
             .WithMessage(ValidationResource.InvalidBirthday);
 
         RuleFor(v => v.Gender)
             .IsInEnum()
-            .OverridePropertyName(UserResource.Gender)
+            .WithName(UserResource.Gender)
             .WithMessage(ValidationResource.InvalidGender);
     }
 }
