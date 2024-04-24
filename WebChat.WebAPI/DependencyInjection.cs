@@ -115,9 +115,8 @@ public static class DependencyInjection
         {
             // Danh sách các culture được hỗ trợ
             var supportedCultures = new List<CultureInfo> {
-                new CultureInfo ("vi-VN"),
-                //new CultureInfo ("en-US"),
-                //new CultureInfo ("fr-FR")
+                new("vi-VN"),
+                new("en-US"),
             };
 
             // Thiết lập culture mặc định

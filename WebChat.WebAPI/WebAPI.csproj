@@ -42,6 +42,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resources\ErrorResource.en-US.Designer.cs">
+      <DependentUpon>ErrorResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Resources\ErrorResource.Designer.cs">
       <DependentUpon>ErrorResource.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -50,6 +55,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\ErrorResource.en-US.resx">
+      <LastGenOutput>ErrorResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\ErrorResource.resx">
       <LastGenOutput>ErrorResource.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>

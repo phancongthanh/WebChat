@@ -17,33 +17,68 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Common\Resources\ConversationResource.en-US.Designer.cs">
+      <DependentUpon>ConversationResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Common\Resources\ConversationResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ConversationResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Resources\FileResource.en-US.Designer.cs">
+      <DependentUpon>FileResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Common\Resources\FileResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>FileResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Common\Resources\FriendResource.en-US.Designer.cs">
+      <DependentUpon>FriendResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Common\Resources\FriendResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>FriendResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Resources\GroupResource.en-US.Designer.cs">
+      <DependentUpon>GroupResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Common\Resources\GroupResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>GroupResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Common\Resources\MessageResource.en-US.Designer.cs">
+      <DependentUpon>MessageResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Common\Resources\MessageResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>MessageResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="Common\Resources\PhoneNumberResource.en-US.Designer.cs">
+      <DependentUpon>PhoneNumberResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Common\Resources\PhoneNumberResource.Designer.cs">
       <DependentUpon>PhoneNumberResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Common\Resources\UserResource.en-US.Designer.cs">
+      <DependentUpon>UserResource.en-US.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
@@ -51,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>UserResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Resources\ValidationResource.en-US.Designer.cs">
+      <DependentUpon>ValidationResource.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Common\Resources\ValidationResource.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -60,33 +100,65 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Common\Resources\ConversationResource.en-US.resx">
+      <LastGenOutput>ConversationResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\ConversationResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ConversationResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\FileResource.en-US.resx">
+      <LastGenOutput>FileResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\FileResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FileResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\FriendResource.en-US.resx">
+      <LastGenOutput>FriendResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\FriendResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FriendResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\GroupResource.en-US.resx">
+      <LastGenOutput>GroupResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\GroupResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>GroupResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\MessageResource.en-US.resx">
+      <LastGenOutput>MessageResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\MessageResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MessageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\PhoneNumberResource.en-US.resx">
+      <LastGenOutput>PhoneNumberResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\PhoneNumberResource.resx">
       <LastGenOutput>PhoneNumberResource.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\UserResource.en-US.resx">
+      <LastGenOutput>UserResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\UserResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UserResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Common\Resources\ValidationResource.en-US.resx">
+      <LastGenOutput>ValidationResource.en-US.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\Resources\ValidationResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
