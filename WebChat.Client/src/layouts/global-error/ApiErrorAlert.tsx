@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, Typography } from "@mui/material";
 import ApiError from "../../types/errors/ApiError";
 import AppError from "../../types/errors/AppError";
 import ClientError from "../../types/errors/ClientError";
 import ConnectionError from "../../types/errors/ConnectionError";
 import ServerError from "../../types/errors/ServerError";
+import StyledDialogTitle from "../../components/StyledDialogTitle";
 
 export default function ApiErrorAlert({ error, onClose }: { error?: ApiError; onClose?: (e: AppError) => void }) {
   const [open, setOpen] = useState(false);
@@ -35,22 +35,8 @@ export default function ApiErrorAlert({ error, onClose }: { error?: ApiError; on
   }
   return (
     <Dialog onClose={handleClose} open={open && !!error}>
-      <DialogTitle sx={{ m: 0, p: 2, width: "500px" }}>
-        {title}
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: "50%",
-            transform: "translateY(-50%)",
-          }}
-        >
-          <FontAwesomeIcon icon="xmark" />
-        </IconButton>
-      </DialogTitle>
-      <DialogContent>
+      <StyledDialogTitle onClose={handleClose}>{title}</StyledDialogTitle>
+      <DialogContent className="min-w-80">
         <Typography>{description}</Typography>
         {details.map((e) => (
           <Typography key={e}>{e}</Typography>
