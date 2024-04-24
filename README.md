@@ -2,7 +2,7 @@
 
 ## Mô Tả
 
-Đây là một dự án về nhắn tin thời gian thực sử dụng React + .Net Core, được thiết kế để cho phép người dùng trao đổi tin nhắn giữa bạn bè và nhóm người dùng với nhau.
+Đây là một dự án về nhắn tin thời gian thực sử dụng React + Typescript + .Net Core, được thiết kế để cho phép người dùng trao đổi tin nhắn giữa bạn bè và nhóm người dùng với nhau.
 
 ## Chức Năng Cung Cấp
 
@@ -19,11 +19,14 @@
 - Axios
 - Formik & Yup
 - Material UI
+- Tailwind CSS
+- I18n
 
 ### [Backend](https://github.com/phancongthanh/WebChat/blob/main/Directory.Packages.props)
 
 - ASP.Net Core API 8
 - EF Core 8
+- SignalR
 - MediatR
 - FluentValidation
 
