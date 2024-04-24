@@ -1,4 +1,22 @@
 {
+  "fields": {
+    "phone": "Phone number",
+    "password": "Password",
+    "name": "Your name",
+    "birthday": "Birthday",
+    "gender": "Gender",
+    "validate-errors": {
+      "country": "",
+      "phone": {
+        "invalid": "The phone number must be 7 to 15 characters long, not including the leading zero.",
+        "required": "Phone number cannot be left blank."
+      },
+      "name": {
+        "invalid": "Invalid name.",
+        "required": "Name cannot be left blank."
+      }
+    }
+  },
   "title": {
     "sign-up": "Sign up to WebChat account",
     "login": "Sign in to WebChat account",
@@ -25,6 +43,11 @@
     "btns": {
       "submit": "Login with password",
       "forgot": "Forgot password?"
+    }
+  },
+  "sign-up": {
+    "btns": {
+      "sign-up": "Sign up a account"
     }
   }
 }

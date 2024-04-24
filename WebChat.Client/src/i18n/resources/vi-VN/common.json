@@ -24,7 +24,7 @@
     "leader": "Trưởng nhóm"
   },
   "password": {
-    "invalid": "Mật khẩu phải có tối thiểu tám ký tự, ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt {{chars}}.",
+    "invalid": "Mật khẩu phải có tối thiểu {{length}} ký tự, ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt {{chars}}.",
     "required": "Mật khẩu không được bỏ trống.",
     "requireUppercase": "Mật khẩu phải chứa ít nhất 1 ký tự hoa.",
     "requireLowercase": "Mật khẩu phải chứa ít nhất 1 ký tự thường.",

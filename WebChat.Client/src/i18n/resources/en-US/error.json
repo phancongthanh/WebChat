@@ -1,0 +1,18 @@
+{
+  "unknown": {
+    "title": "An error occurred",
+    "description": "An error occurred, please try again later!"
+  },
+  "no-internet": {
+    "title": "An error occurred",
+    "description": "Can not connect to server!"
+  },
+  "unauthorized": {
+    "title": "Authentication error",
+    "description": "The user is not logged in or the login session has expired!"
+  },
+  "server": {
+    "title": "An error occurred",
+    "description": "An error occurred, please try again later!"
+  }
+}

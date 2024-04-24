@@ -1,0 +1,36 @@
+{
+  "user-profile-dialog": {
+    "title": "User Profile",
+    "user-is-blocked": "User is blocked",
+    "fields": {
+      "mutual-group": "Mutual group",
+      "phone-number": "Phone number",
+      "gender": "Gender",
+      "birthday": "Birthday"
+    }
+  },
+  "group-profile-dialog": {
+    "title": "Group Profile",
+    "members": "{{count}} members"
+  },
+  "update-info-dialog": {
+    "title": "Update info",
+    "name-recommend": "Use your real name to make it easier for friends to identify you",
+    "change-avatar": "Change avatar",
+    "fields": {
+      "display-name": "Display name",
+      "phone-number": "Registered phone number",
+      "birthday": "Birthday",
+      "gender": "Gender",
+      "required-name": "Name is required",
+      "invalid-name": "Invalid name"
+    },
+    "alert": {
+      "title": "Notification",
+      "updated-data-successfully": "Data update successful, please reload!"
+    }
+  },
+  "confirm-dialog": {
+    "title": "Confirm"
+  }
+}

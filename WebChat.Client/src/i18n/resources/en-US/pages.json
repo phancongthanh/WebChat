@@ -1,0 +1,107 @@
+{
+  "loading": {
+    "step-1": "Checking login",
+    "step-2": "Getting current user information",
+    "step-3": "Loading friends list",
+    "step-4": "Loading group list",
+    "step-5": "Loading conversations",
+    "step-6": "Connecting to websocket"
+  },
+  "start-box": {
+    "title": "Welcome to ",
+    "description": "Discover utilities to support working and chatting with relatives and friends optimized for your device.",
+    "0": {
+      "title": "Real-time messaging",
+      "description": "Messages are sent and received instantly between users in a conversation."
+    },
+    "1": {
+      "title": "Messages delete themselves",
+      "description": "Messages will automatically delete themselves after a certain period of time."
+    },
+    "2": {
+      "title": "Chat with everyone via WebChat Group",
+      "description": "Text anytime, anywhere"
+    },
+    "3": {
+      "title": "Experience throughout",
+      "description": "Connect and get work done on any device with data that is always synchronized"
+    },
+    "4": {
+      "title": "Send Files?",
+      "description": "WebChat allows sending files in any format"
+    },
+    "5": {
+      "title": "Group chat with friends",
+      "description": "More convenient, thanks to chat support tools on computers"
+    }
+  },
+  "friend-requests": {
+    "title": "Friend requests",
+    "empty": "You don't have any friend requests yet",
+    "sent-requests": "Sent friend requests ({{count}})",
+    "received-requests": "Received friend requests ({{count}})",
+    "sent-time": "Sent at: "
+  },
+  "group-requests": {
+    "title": "Requests and invitations",
+    "empty": "You have not sent or received any requests to join the group",
+    "sent-requests": "Sent requests to join group ({{count}})",
+    "received-invitations": "Received invitations to join group ({{count}})",
+    "sent-time": "Sent at: "
+  },
+  "cloud-chat": {
+    "title": "My Cloud",
+    "sub-title": "Exchange files between your devices"
+  },
+  "user-chat": {
+    "stranger": "Stranger",
+    "offline": "Offline",
+    "online": "Online",
+    "minutes": "{{minutes}} minutes ago",
+    "hours": "{{hours}} hours ago",
+    "days": "{{days}} days ago"
+  },
+  "group-chat": {
+    "member": "{{count}} members",
+    "info": {
+      "title": "Group information",
+      "header": {
+        "manage": "Group management",
+        "member-list": "Members list",
+        "group-requests": "List of requests to join the group",
+        "group-invitations": "List of group invitations"
+      },
+      "setting": {
+        "allowChangeGName": "Allow members to change group name",
+        "allowSendGInvitation": "Allows members to invite others to the group",
+        "membershipApproval": "New member approval mode",
+        "readRecentMessage": "Allow new members to read recent messages",
+        "joinGroupByLink": "Allow using group code to join the group",
+        "groupCode": "Group code"
+      },
+      "send-by": "Sent by {{name}}",
+      "join-by": "Joined by {{name}}",
+      "reject-confirm": "Are you sure you want to decline {{name}}'s request?",
+      "role-actions": {
+        "member": "Switch member",
+        "deputy-group": "Add new admin",
+        "leader": "Change leader"
+      },
+      "confirms": {
+        "member": "Are you sure you want to revoke {{name}}'s permissions?",
+        "deputy-group": "Are you sure you want {{name}} to be an administrator?",
+        "leader": "Are you sure you want to transfer the group leader to {{name}}?",
+        "block": "Are you sure you want to block {{name}}?",
+        "unblock": "Are you sure you want to unblock {{name}}?",
+        "kick-member": "Are you sure you want to delete {{name}}?"
+      }
+    },
+    "send-invitation": {
+      "title": "Send an invitation to join the group",
+      "search-placeholder": "Enter your name or phone number",
+      "search-result": "Search results",
+      "recent": "Recently",
+      "friends": "Friends"
+    }
+  }
+}

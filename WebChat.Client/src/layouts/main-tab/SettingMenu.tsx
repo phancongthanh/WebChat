@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, ListItemIcon, ListItemText, Menu, MenuItem, MenuList, Tooltip, Typography } from "@mui/material";
 import { Language } from "../../enums/Language";
+import { storage } from "../../utils/storage-management";
 import ActiveComponent from "../../components/ActiveComponent";
 import UpdateInfoDialog from "../../views/UpdateInfoDialog";
 import AppInfo from "./AppInfo";
@@ -16,6 +17,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
   const changeLanguage = (language: Language) => {
     onClose();
     i18n.changeLanguage(language);
+    storage.setLanguage(language);
   };
 
   useEffect(() => {

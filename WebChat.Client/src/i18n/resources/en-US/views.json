@@ -1,0 +1,73 @@
+{
+  "chat-bar": {
+    "placeholder": "Send a message!",
+    "send": "Send",
+    "emoji": "Send Emoji",
+    "send-photos": "Send photos",
+    "attach-file": "Attach files",
+    "too-large-size": "File size is too large",
+    "too-many-files": "Only {{count}} files are allowed"
+  },
+  "chat-guide": "Hi, this is a texting conversation. You can message text, emoji, files and photos using your computer and phone through this conversation.",
+  "chat-message": {
+    "hide-message": "Hide message",
+    "delete-message": "Delete message",
+    "hidden-confirm": "Are you sure you want to hide messages? The message is deleted only for you!",
+    "deleted-confirm": "Are you sure you want to delete the message? The message will be deleted for everyone!",
+    "deleted-message": "The message has been deleted!"
+  },
+  "add-friend-dialog": {
+    "title": "Add friend",
+    "text": "Send invitations to your friends!",
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "default-title": "Hello!",
+      "default-description": "I'm {{name}}, let's be friends!",
+      "required-title": "Title cannot be empty",
+      "required-description": "Description cannot be empty"
+    }
+  },
+  "delete-conversation-confirm": {
+    "content": "Are you sure you want to delete all messages in this conversation?",
+    "delete": "Delete messages"
+  },
+  "delete-friend-confirm": {
+    "delete": "Are you sure you want to unfriend \"{{name}}\"?",
+    "undo": "Are you sure you want to undo \"{{name}}\"'s friend request?",
+    "reject": "Are you sure you want to reject \"{{name}}\"'s friend request?"
+  },
+  "leave-group-confirm": {
+    "leave": "Are you sure you want to leave the \"{{name}}\" group?",
+    "undo": "Are you sure you want to undo your request to join the \"{{name}}\" group?",
+    "reject": "Are you sure you want to reject the invitation to join the \"{{name}}\" group?"
+  },
+  "set-alias-dialog": {
+    "title": "Set alias",
+    "description": {
+      "first": "Give ",
+      "last": " an easy-to-remember name."
+    },
+    "notice": "Note: The reminder name will only be visible to you.",
+    "fields": {
+      "alias": "Alias name",
+      "required-alias": "The alias name cannot be empty",
+      "invalid-alias": "Invalid alias name"
+    },
+    "btns": {
+      "set": "Set",
+      "reset": "Cancel the alias name"
+    }
+  },
+  "update-group-name-dialog": {
+    "title": "Change group name",
+    "name": "Group name",
+    "required-name": "Group name cannot be empty",
+    "invalid-name": "Invalid group name",
+    "description": {
+      "first": "Please give the group a new name ",
+      "last": "."
+    },
+    "notice": "Note: The group name will be visible to everyone."
+  }
+}

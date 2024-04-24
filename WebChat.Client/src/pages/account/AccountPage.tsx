@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { StyledEngineProvider } from "@mui/material";
 import "../../assets/css/account-page.css";
 import { Language } from "../../enums/Language";
+import { storage } from "../../utils/storage-management";
 import ActiveComponent from "../../components/ActiveComponent";
 import ForgotPassword from "./components/ForgotPassword";
 import Login from "./components/Login";
@@ -27,6 +28,11 @@ export default function AccountPage() {
         document.title = t("title.login", { ns: "account" });
     }
   }, [view, t]);
+
+  const changeLanguage = (language: Language) => {
+    i18n.changeLanguage(language);
+    storage.setLanguage(language);
+  };
 
   return (
     <StyledEngineProvider injectFirst>
@@ -61,13 +67,13 @@ export default function AccountPage() {
             <div className="text-center">
               <span
                 className="text-sm text-blue-500 cursor-pointer mr-4 hover:underline"
-                onClick={() => i18n.changeLanguage(Language.VI)}
+                onClick={() => changeLanguage(Language.VI)}
               >
                 {i18n.language === Language.VI ? <b>Tiếng việt</b> : "Tiếng việt"}
               </span>
               <span
                 className="text-sm text-blue-500 cursor-pointer mr-4 hover:underline"
-                onClick={() => i18n.changeLanguage(Language.EN)}
+                onClick={() => changeLanguage(Language.EN)}
               >
                 {i18n.language === Language.EN ? <b>English</b> : "English"}
               </span>

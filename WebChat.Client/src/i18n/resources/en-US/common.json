@@ -1,0 +1,71 @@
+{
+  "language": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "feature": {
+    "unavaliable": "Function not available yet!"
+  },
+  "gender": {
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female"
+  },
+  "message-status": {
+    "sending": "Sending",
+    "sent": "Sent",
+    "received": "Received",
+    "seen": "Seen"
+  },
+  "member-role": {
+    "is-block": "Blocked",
+    "member": "Member",
+    "deputy-group": "Group deputy",
+    "leader": "Leader"
+  },
+  "password": {
+    "invalid": "Password must have a minimum of {{length}} characters, at least one uppercase letter, one lowercase letter, one number, and one special character {{chars}}.",
+    "required": "Password is required",
+    "requireUppercase": "Password must contain at least 1 uppercase character.",
+    "requireLowercase": "Password must contain at least 1 lowercase character.",
+    "requireDigit": "Password must contain at least 1 digit.",
+    "requiredUniqueChars": "Password must contain at least one special character: {{chars}}.",
+    "minLength": "Password must be at least {{length}} characters long.",
+    "confirm": "New password and confirmation password are not the same."
+  },
+  "btns": {
+    "close": "Close",
+    "ok": "Ok",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "agree": "Agree",
+    "deny": "Deny",
+    "reject": "Reject",
+    "accept": "Accept",
+    "leave-group": "Leave group",
+    "delete-friend": "Delete friend",
+    "delete": "Delete",
+    "update": "Update",
+    "edit": "Edit",
+    "chat": "Chat",
+    "block": "Block",
+    "unblock": "Unblock",
+    "hide": "Hide",
+    "undo": "Undo",
+    "kick-member": "Kick out",
+    "search": "Search",
+    "join-group": "Join group",
+    "send-group-request": "Send a request",
+    "reject-group-invitation": "Reject the invitation",
+    "send": "Send",
+    "reload": "Reload",
+    "add-friend": "Add friend",
+    "create-group": "Create group",
+    "logout": "Logout",
+    "reply": "Reply"
+  },
+  "phone": {
+    "country-code": "Country code",
+    "number": "Phone number"
+  }
+}

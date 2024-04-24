@@ -26,8 +26,8 @@ export default function AppInfo({ open, onClose }: { open: boolean; onClose: () 
       <Paper sx={style}>
         <Box bgcolor="blue" padding="16px" color="white">
           <Typography variant="h4">{t("app-info.title", { ns: "layouts" })}</Typography>
-          <a href="https://zalo.me/zalo-chat">
-            <Typography className="text-white no-underline">{t("app-info.description", { ns: "layouts" })}</Typography>
+          <a className="text-white no-underline" href="https://zalo.me/zalo-chat">
+            <Typography>{t("app-info.description", { ns: "layouts" })}</Typography>
           </a>
         </Box>
         <List>

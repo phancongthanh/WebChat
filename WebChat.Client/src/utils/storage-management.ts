@@ -13,7 +13,9 @@ export default class StorageManagement {
     return this.storage.getItem(key);
   }
   clear() {
+    const language = this.getLanguage();
     this.storage.clear();
+    if (language) this.setLanguage(language);
   }
   setPhone(phone: PhoneNumber) {
     this.storage.setItem("phone", JSON.stringify(phone));

@@ -99,7 +99,7 @@ export default function ChatMessage({ isBreak, message }: { isBreak?: boolean; m
           </MenuItem>
         </ActiveComponent>
       </Menu>
-      <ConfirmDialog open={modal !== null} onConfirm={handleConfirm}>
+      <ConfirmDialog open={modal !== null} onConfirm={handleConfirm} onClose={() => setModal(null)}>
         <ActiveComponent condition={modal === "Hide"}>
           {t("chat-message.hidden-confirm", { ns: "views" })}
         </ActiveComponent>

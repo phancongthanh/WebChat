@@ -1,0 +1,127 @@
+{
+  "main-tab": {
+    "btn-title": {
+      "cloud": "Cloud",
+      "message": "Messages",
+      "friend": "Friend Contacts",
+      "group": "Groups",
+      "notification": "Notification",
+      "setting": "Settings"
+    }
+  },
+  "change-password": {
+    "title": "Change Password",
+    "old": "Current password",
+    "new": "New password",
+    "confirm": "Enter confirmed password"
+  },
+  "app-info": {
+    "title": "WebChat",
+    "description": "The application is developed to clone Zalo PC!",
+    "fields": {
+      "app-name": "Application name",
+      "version": "Version:",
+      "email": "Email:",
+      "phone": "Phone number",
+      "group-code": "Generic group code",
+      "max-file-size": "Maximum file size",
+      "max-file-per-message": "Number of files per message"
+    }
+  },
+  "logout-confirm": "Are you sure you want to sign out of your account?",
+  "settings-menu": {
+    "account-info": "Account information",
+    "change-password": "Change password",
+    "settings": "Settings",
+    "language": "Language",
+    "about": "About",
+    "logout": "Logout",
+    "vi": "Tiếng Việt",
+    "en": "English",
+    "version": "Version info",
+    "report": "Report"
+  },
+  "conversation-list": {
+    "tabs": {
+      "all": "All",
+      "unread": "Unread",
+      "hidden": "Hidden",
+      "unfriend": "Unfriend"
+    },
+    "empty": "No conversation yet",
+    "cloud-name": "My Cloud",
+    "time": {
+      "few-sec": "a few seconds",
+      "mins": "{{mins}} minutes",
+      "hours": "{{hours}} hours",
+      "days": "{{days}} days"
+    },
+    "you": "You",
+    "file-message": "A file message has been sent",
+    "menu": {
+      "show": "Unhide",
+      "hidden": "Hide the conversation",
+      "delete": "Clear messages"
+    }
+  },
+  "friend-contacts": {
+    "add-friend": "Add friends by phone number",
+    "friend-requests": "Friend list",
+    "cloud": "My Cloud",
+    "cloud-description": "Send Files between devices",
+    "friend": "Friends ({{count}})",
+    "menu": {
+      "more": "Detail",
+      "alias": "Set alias",
+      "block": "Block",
+      "unblock": "Unblock",
+      "delete": "Delete friend"
+    },
+    "search": {
+      "title": "Search friend",
+      "not-found-user": "User not found",
+      "placeholder": "Please fill in phone number",
+      "recent-searches": "Recent searches:",
+      "no-recent-searches": "There are no recent searches",
+      "invalid-phone": "The phone number must be 7 to 15 characters long, not including the leading zero.",
+      "required-phone": "Phone number is required."
+    }
+  },
+  "group-contacts": {
+    "create-group": "Create groups with friends",
+    "search-group": "Find groups",
+    "joined-group-description": "Join groups with people",
+    "requests-invitations": "Requests and invitations",
+    "group": "Groups ({{count}})",
+    "menu": {
+      "more": "Detail",
+      "name": "Change name",
+      "leave": "Leave group"
+    },
+    "create": {
+      "title": "Create a group",
+      "name": "Group name",
+      "name-recommend": "Choose a name for the group!",
+      "userIds": "Members list",
+      "invalid-userIds": "Group must have at least 3 members",
+      "required-name": "Group name cannot be empty",
+      "invalid-name": "Invalid group name",
+      "not-enough-friend": "Not enough friends",
+      "not-enough": "Not enough friends to create a group with at least 3 members.",
+      "should-add-friend": "Add friends to create groups with many people!"
+    },
+    "search": {
+      "title": "Search group",
+      "code": "Group code",
+      "required-code": "Group code cannot be empty",
+      "invalid-code": "Invalid group code",
+      "not-found-group": "Group not found",
+      "placeholder": "Please fill in the group code",
+      "recent-searches": "Recent searches:",
+      "no-recent-searches": "There are no recent searches"
+    }
+  },
+  "search-input": {
+    "placeholder": "Search"
+  }
+}
