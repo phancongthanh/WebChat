@@ -31,8 +31,8 @@ const useSchema = (t: TFunction) =>
   yup.object().shape({
     phone: yup
       .string()
-      .required(t("friend-contacts.search.required-phone", { ns: "layout" }))
-      .matches(/^0[1-9][0-9]{6,14}$/, t("friend-contacts.search.invalid-phone", { ns: "layout" })),
+      .required(t("friend-contacts.search.required-phone", { ns: "layouts" }))
+      .matches(/^0[1-9][0-9]{6,14}$/, t("friend-contacts.search.invalid-phone", { ns: "layouts" })),
   });
 
 export default function FriendSearchDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -72,7 +72,7 @@ export default function FriendSearchDialog({ open, onClose }: { open: boolean; o
   return (
     <FormDialog
       open={open}
-      title={t("friend-contacts.search.title", { ns: "layout" })}
+      title={t("friend-contacts.search.title", { ns: "layouts" })}
       okText={t("btns.search")}
       isValid={formik.isValid}
       isSubmitting={formik.isSubmitting}
@@ -95,7 +95,7 @@ export default function FriendSearchDialog({ open, onClose }: { open: boolean; o
             }}
             placeholder={t("phone.number", { ns: "common" })}
             title={t("friend-contacts.search.placeholder", {
-              ns: "layout",
+              ns: "layouts",
             })}
           />
         </Stack>

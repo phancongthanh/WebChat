@@ -37,7 +37,7 @@ export default function GroupContacts() {
             </SquareIcon>
           </Avatar>
         </ListItemIcon>
-        <ListItemText>{t("group-contacts.create-group", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("group-contacts.create-group", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <CreateGroupDialog open={modal === "Create"} onClose={() => setModal(null)} />
       <ListItemButton onClick={() => setModal("Search")}>
@@ -48,26 +48,26 @@ export default function GroupContacts() {
             </SquareIcon>
           </Avatar>
         </ListItemIcon>
-        <ListItemText>{t("group-contacts.search-group", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("group-contacts.search-group", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <GroupSearchDialog open={modal === "Search"} onClose={() => setModal(null)} />
       <Divider variant="middle" />
       <ListSubheader component="div">
         {t("group-contacts.joined-group-description", {
-          ns: "layout",
+          ns: "layouts",
         })}
       </ListSubheader>
       <ListItemButton component={MuiNavLink} to={ViewType.GroupRequests}>
         <ListItemIcon>
           <Avatar src={joinedGroupsImg} />
         </ListItemIcon>
-        <ListItemText>{t("group-contacts.requests-invitations", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("group-contacts.requests-invitations", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <Divider variant="middle" />
       <ListItemButton onClick={() => setHiddenGroup(!hiddenGroup)}>
         <ListItemText>
           {t("group-contacts.group", {
-            ns: "layout",
+            ns: "layouts",
             count: groups.length,
           })}
         </ListItemText>

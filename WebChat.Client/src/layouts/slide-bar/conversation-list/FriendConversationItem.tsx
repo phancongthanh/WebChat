@@ -44,14 +44,14 @@ export default function FriendConversationItem({ friend, conversation }: { frien
             }
           >
             <ActiveComponent condition={message.fromUserId === userId}>
-              {t("conversation-list.you", { ns: "layout" })}
+              {t("conversation-list.you", { ns: "layouts" })}
               {": "}
             </ActiveComponent>
             <ActiveComponent condition={message.text}>
               <TextWithEmojiRender text={message.text} />
             </ActiveComponent>
             <ActiveComponent condition={!message.text}>
-              {t("conversation-list.file-message", { ns: "layout" })}
+              {t("conversation-list.file-message", { ns: "layouts" })}
             </ActiveComponent>
           </Typography>
         </ListItemText>

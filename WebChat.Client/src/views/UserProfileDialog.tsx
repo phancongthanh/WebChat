@@ -33,7 +33,7 @@ export default function UserProfileDialog({
   const [modal, setModal] = useState<"Alias" | "Add-Friend" | "Delete" | null>(null);
 
   return (
-    <Modal open={Boolean(user) && open} title={t("user-profile-dialog.title", { ns: "component" })} onClose={onClose}>
+    <Modal open={Boolean(user) && open} title={t("user-profile-dialog.title", { ns: "components" })} onClose={onClose}>
       <Stack gap={2}>
         <Box>
           <Box marginBottom="50px" position="relative">
@@ -77,7 +77,7 @@ export default function UserProfileDialog({
               variant="contained"
               size="small"
               disabled={user?.beBlocked}
-              title={user?.beBlocked ? t("user-profile-dialog.user-is-blocked", { ns: "component" }) : undefined}
+              title={user?.beBlocked ? t("user-profile-dialog.user-is-blocked", { ns: "components" }) : undefined}
               onClick={() => setModal("Add-Friend")}
             >
               {t("btns.add-friend")}
@@ -101,7 +101,7 @@ export default function UserProfileDialog({
               variant="contained"
               size="small"
               disabled={user?.beBlocked}
-              title={user?.beBlocked ? t("user-profile-dialog.user-is-blocked", { ns: "component" }) : undefined}
+              title={user?.beBlocked ? t("user-profile-dialog.user-is-blocked", { ns: "components" }) : undefined}
               onClick={async () => userId && (await dispatch(acceptFriendRequest(userId)))}
             >
               {t("btns.accept")}
@@ -124,7 +124,7 @@ export default function UserProfileDialog({
           <ListItem>
             <Typography width="125px">
               {t("user-profile-dialog.fields.mutual-group", {
-                ns: "component",
+                ns: "components",
               })}
             </Typography>
             <Typography />
@@ -132,7 +132,7 @@ export default function UserProfileDialog({
           <ListItem>
             <Typography width="125px">
               {t("user-profile-dialog.fields.phone-number", {
-                ns: "component",
+                ns: "components",
               })}
             </Typography>
             <Typography>{user?.phone?.toString() || "*********"}</Typography>
@@ -140,7 +140,7 @@ export default function UserProfileDialog({
           <ListItem>
             <Typography width="125px">
               {t("user-profile-dialog.fields.gender", {
-                ns: "component",
+                ns: "components",
               })}
             </Typography>
             <Typography>
@@ -150,7 +150,7 @@ export default function UserProfileDialog({
           <ListItem>
             <Typography width="125px">
               {t("user-profile-dialog.fields.birthday", {
-                ns: "component",
+                ns: "components",
               })}
             </Typography>
             <Typography>{user?.birthday.toLocaleDateString(i18n.language)}</Typography>

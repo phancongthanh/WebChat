@@ -50,13 +50,13 @@ export default function SearchHistory({
   onDelete?: (groupId: string) => void;
 }) {
   const { t } = useTranslation();
-  if (!groupIds.length) return <span>{t("group-contacts.search.no-recent-searches", { ns: "layout" })}</span>;
+  if (!groupIds.length) return <span>{t("group-contacts.search.no-recent-searches", { ns: "layouts" })}</span>;
 
   return (
     <MenuList
       subheader={
         <ListSubheader className="p-0 text-left" component="div">
-          {t("group-contacts.search.recent-searches", { ns: "layout" })}
+          {t("group-contacts.search.recent-searches", { ns: "layouts" })}
         </ListSubheader>
       }
     >

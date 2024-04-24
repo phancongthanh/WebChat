@@ -37,28 +37,28 @@ export default function FriendContacts() {
             </SquareIcon>
           </Avatar>
         </ListItemIcon>
-        <ListItemText>{t("friend-contacts.add-friend", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("friend-contacts.add-friend", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <FriendSearchDialog open={modal === "Search"} onClose={() => setModal(null)} />
       <ListItemButton component={MuiNavLink} to={ViewType.FriendRequests}>
         <ListItemIcon>
           <Avatar src={friendRequestsImg} />
         </ListItemIcon>
-        <ListItemText>{t("friend-contacts.friend-requests", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("friend-contacts.friend-requests", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <Divider variant="middle" />
-      <ListSubheader component="div">{t("friend-contacts.cloud-description", { ns: "layout" })}</ListSubheader>
+      <ListSubheader component="div">{t("friend-contacts.cloud-description", { ns: "layouts" })}</ListSubheader>
       <ListItemButton component={MuiNavLink} to="Cloud">
         <ListItemIcon>
           <Avatar src={cloudImg} />
         </ListItemIcon>
-        <ListItemText>{t("friend-contacts.cloud", { ns: "layout" })}</ListItemText>
+        <ListItemText>{t("friend-contacts.cloud", { ns: "layouts" })}</ListItemText>
       </ListItemButton>
       <Divider variant="middle" />
       <ListItemButton onClick={() => setHiddenFriend(!hiddenFriend)}>
         <ListItemText>
           {t("friend-contacts.friend", {
-            ns: "layout",
+            ns: "layouts",
             count: friends.length,
           })}
         </ListItemText>

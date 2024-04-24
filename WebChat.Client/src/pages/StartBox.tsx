@@ -8,7 +8,6 @@ import startBoxImg2 from "../assets/images/start-box-images/StartBox-img-2.jpg";
 import startBoxImg3 from "../assets/images/start-box-images/StartBox-img-3.jpg";
 import startBoxImg4 from "../assets/images/start-box-images/StartBox-img-4.png";
 import startBoxImg5 from "../assets/images/start-box-images/StartBox-img-5.jpg";
-import startBoxImg6 from "../assets/images/start-box-images/StartBox-img-6.jpg";
 import SquareIcon from "../components/SquareIcon";
 
 const style: SxProps = {
@@ -45,11 +44,6 @@ const data = [
     img: startBoxImg5,
     title: <Translation>{(t) => t("start-box.5.title", { ns: "pages" })}</Translation>,
     description: <Translation>{(t) => t("start-box.5.description", { ns: "pages" })}</Translation>,
-  },
-  {
-    img: startBoxImg6,
-    title: <Translation>{(t) => t("start-box.6.title", { ns: "pages" })}</Translation>,
-    description: <Translation>{(t) => t("start-box.6.description", { ns: "pages" })}</Translation>,
   },
 ];
 
@@ -114,7 +108,7 @@ export default function StartBox() {
         </IconButton>
       </Box>
       <Stack direction="row" gap={2}>
-        {[0, 1, 2, 3, 4, 5, 6].map((value) => (
+        {Array.from(Array(data.length).keys()).map((value) => (
           <Box
             key={value}
             className="w-2 h-2 rounded-full cursor-pointer"

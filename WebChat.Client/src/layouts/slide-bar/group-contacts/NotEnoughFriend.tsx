@@ -13,7 +13,7 @@ export default function NotEnoughFriends({ open, onClose }: { open: boolean; onC
     <Modal
       open={open}
       onClose={onClose}
-      title={t("group-contacts.create.not-enough-friend", { ns: "layout" })}
+      title={t("group-contacts.create.not-enough-friend", { ns: "layouts" })}
       btns={[
         <Button key="cancel" variant="contained" color="secondary" disableRipple onClick={onClose}>
           {t("btns.cancel")}
@@ -26,12 +26,12 @@ export default function NotEnoughFriends({ open, onClose }: { open: boolean; onC
       <Box>
         <Typography>
           {t("group-contacts.create.not-enough", {
-            ns: "layout",
+            ns: "layouts",
           })}
         </Typography>
         <Typography>
           {t("group-contacts.create.should-add-friend", {
-            ns: "layout",
+            ns: "layouts",
           })}
         </Typography>
       </Box>

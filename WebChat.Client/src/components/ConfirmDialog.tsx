@@ -36,7 +36,7 @@ export default function ConfirmDialog({
         <Typography className=" inline-block mr-2 text-xl" color="warning.main">
           <FontAwesomeIcon icon={["fas", "triangle-exclamation"]} />
         </Typography>
-        {title || t("confirm-dialog.title", { ns: "component" })}
+        {title || t("confirm-dialog.title", { ns: "components" })}
       </StyledDialogTitle>
       <DialogContent>{children}</DialogContent>
       <DialogActions>

@@ -12,7 +12,7 @@ export default function LogoutConfirm({ open, onClose }: { open: boolean; onClos
 
   return (
     <ConfirmDialog open={open} onClose={onClose} onConfirm={logOut}>
-      {t("logout-confirm", { ns: "layout" })}
+      {t("logout-confirm", { ns: "layouts" })}
     </ConfirmDialog>
   );
 }

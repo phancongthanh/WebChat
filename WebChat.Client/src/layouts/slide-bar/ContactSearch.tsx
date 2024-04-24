@@ -50,7 +50,7 @@ export default function ContactSearch() {
           inputRef={inputRef}
           value={text}
           onChange={(e) => changeText(e.target.value)}
-          placeholder={t("search-input.placeholder", { ns: "layout" })}
+          placeholder={t("search-input.placeholder", { ns: "layouts" })}
         />
       </Box>
     </Stack>

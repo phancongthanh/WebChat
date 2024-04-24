@@ -28,8 +28,8 @@ const useSchema = (t: TFunction) =>
   yup.object().shape({
     name: yup
       .string()
-      .required(t("update-info-dialog.fields.required-name", { ns: "component" }))
-      .matches(/^[a-zA-Z\s,.'\-\p{L}]+$/u, t("update-info-dialog.fields.invalid-name", { ns: "component" })),
+      .required(t("update-info-dialog.fields.required-name", { ns: "components" }))
+      .matches(/^[a-zA-Z\s,.'\-\p{L}]+$/u, t("update-info-dialog.fields.invalid-name", { ns: "components" })),
   });
 
 export default function UpdateInfoDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -67,7 +67,7 @@ export default function UpdateInfoDialog({ open, onClose }: { open: boolean; onC
   return (
     <FormDialog
       open={open}
-      title={t("update-info-dialog.title", { ns: "component" })}
+      title={t("update-info-dialog.title", { ns: "components" })}
       isSubmitting={formik.isSubmitting}
       okText={t("btns.update")}
       okBtnProps={{ disabled: !formik.isValid || !formik.dirty }}
@@ -81,7 +81,7 @@ export default function UpdateInfoDialog({ open, onClose }: { open: boolean; onC
           position="relative"
           marginTop="-65px"
           sx={{ cursor: "pointer" }}
-          title={t("update-info-dialog.change-avatar", { ns: "component" })}
+          title={t("update-info-dialog.change-avatar", { ns: "components" })}
         >
           <input
             style={{ display: "none" }}
@@ -101,7 +101,7 @@ export default function UpdateInfoDialog({ open, onClose }: { open: boolean; onC
         <FormControl fullWidth>
           <FormLabel>
             {t("update-info-dialog.fields.display-name", {
-              ns: "component",
+              ns: "components",
             })}
           </FormLabel>
           <TextField
@@ -118,34 +118,34 @@ export default function UpdateInfoDialog({ open, onClose }: { open: boolean; onC
           />
           <Typography variant="caption">
             {t("update-info-dialog.name-recommend", {
-              ns: "component",
+              ns: "components",
             })}
           </Typography>
         </FormControl>
         <FormControl fullWidth>
           <FormLabel>
             {t("update-info-dialog.fields.phone-number", {
-              ns: "component",
+              ns: "components",
             })}
           </FormLabel>
           <TextField size="small" type="text" defaultValue={user.phone.toString()} disabled />
         </FormControl>
         <FormGroup className="w-full">
-          <FormLabel>{t("update-info-dialog.fields.birthday", { ns: "component" })}</FormLabel>
+          <FormLabel>{t("update-info-dialog.fields.birthday", { ns: "components" })}</FormLabel>
           <BirthdayPicker date={formik.values.birthday} onChange={(date) => formik.setFieldValue("birthday", date)} />
         </FormGroup>
         <FormControl fullWidth>
-          <FormLabel>{t("update-info-dialog.fields.gender", { ns: "component" })}</FormLabel>
+          <FormLabel>{t("update-info-dialog.fields.gender", { ns: "components" })}</FormLabel>
           <GenderPicker gender={formik.values.gender} onChange={(gender) => formik.setFieldValue("gender", gender)} />
         </FormControl>
       </Stack>
       <Alert
         open={modal === "Reload"}
-        title={t("update-info-dialog.alert.title", { ns: "component" })}
+        title={t("update-info-dialog.alert.title", { ns: "components" })}
         btnText={t("btns.reload")}
         btnClick={() => window.location.reload()}
       >
-        {t("update-info-dialog.alert.updated-data-successfully", { ns: "component" })}
+        {t("update-info-dialog.alert.updated-data-successfully", { ns: "components" })}
       </Alert>
     </FormDialog>
   );

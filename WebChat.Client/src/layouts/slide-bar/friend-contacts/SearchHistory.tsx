@@ -50,13 +50,13 @@ export default function SearchHistory({
   onDelete?: (userId: string) => void;
 }) {
   const { t } = useTranslation();
-  if (!userIds.length) return <span>{t("friend-contacts.search.no-recent-searches", { ns: "layout" })}</span>;
+  if (!userIds.length) return <span>{t("friend-contacts.search.no-recent-searches", { ns: "layouts" })}</span>;
 
   return (
     <MenuList
       subheader={
         <ListSubheader className="p-0 text-left" component="div">
-          {t("friend-contacts.search.recent-searches", { ns: "layout" })}
+          {t("friend-contacts.search.recent-searches", { ns: "layouts" })}
         </ListSubheader>
       }
     >

@@ -64,25 +64,25 @@ export default function ConversationList() {
       <Tabs centered className="min-h-max" value={option} onChange={(_, value) => setOption(value)}>
         <Tab
           className="py-3 px-2 min-w-max min-h-max"
-          label={t("conversation-list.tabs.all", { ns: "layout" })}
+          label={t("conversation-list.tabs.all", { ns: "layouts" })}
           value="All"
           disableRipple
         />
         <Tab
           className="py-3 px-2 min-w-max min-h-max"
-          label={t("conversation-list.tabs.unread", { ns: "layout" })}
+          label={t("conversation-list.tabs.unread", { ns: "layouts" })}
           value="Unread"
           disableRipple
         />
         <Tab
           className="py-3 px-2 min-w-max min-h-max"
-          label={t("conversation-list.tabs.hidden", { ns: "layout" })}
+          label={t("conversation-list.tabs.hidden", { ns: "layouts" })}
           value="Hidden"
           disableRipple
         />
         <Tab
           className="py-3 px-2 min-w-max min-h-max"
-          label={t("conversation-list.tabs.unfriend", { ns: "layout" })}
+          label={t("conversation-list.tabs.unfriend", { ns: "layouts" })}
           value="Unfriend"
           disableRipple
         />
@@ -94,7 +94,7 @@ export default function ConversationList() {
         <Stack alignItems="center" gap={1} marginTop={10}>
           <FontAwesomeIcon className="text-8xl text-gray-300" icon={["fas", "list-ul"]} />
           <Typography className="text-sm" color="secondary">
-            {t("conversation-list.empty", { ns: "layout" })}
+            {t("conversation-list.empty", { ns: "layouts" })}
           </Typography>
         </Stack>
       </ActiveComponent>

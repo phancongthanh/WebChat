@@ -25,27 +25,30 @@ export default function AppInfo({ open, onClose }: { open: boolean; onClose: () 
     <Modal open={open} onClose={onClose}>
       <Paper sx={style}>
         <Box bgcolor="blue" padding="16px" color="white">
-          <Typography variant="h4">{t("app-info.title", { ns: "layout" })}</Typography>
+          <Typography variant="h4">{t("app-info.title", { ns: "layouts" })}</Typography>
+          <a href="https://zalo.me/zalo-chat">
+            <Typography className="text-white no-underline">{t("app-info.description", { ns: "layouts" })}</Typography>
+          </a>
         </Box>
         <List>
           <ListItem>
-            <Typography>{t("app-info.fields.app-name", { ns: "layout" })}</Typography>
+            <Typography>{t("app-info.fields.app-name", { ns: "layouts" })}</Typography>
             <Typography>{systemInfo.appName}</Typography>
           </ListItem>
           <ListItem>
-            <Typography>{t("app-info.fields.version", { ns: "layout" })}</Typography>
+            <Typography>{t("app-info.fields.version", { ns: "layouts" })}</Typography>
             <Typography>{systemInfo.version}</Typography>
           </ListItem>
           <ListItem>
-            <Typography>{t("app-info.fields.phone", { ns: "layout" })}</Typography>
+            <Typography>{t("app-info.fields.phone", { ns: "layouts" })}</Typography>
             <Typography>{systemInfo.adminPhone.toString()}</Typography>
           </ListItem>
           <ListItem>
-            <Typography>{t("app-info.fields.email", { ns: "layout" })}</Typography>
+            <Typography>{t("app-info.fields.email", { ns: "layouts" })}</Typography>
             <Typography>{systemInfo.email}</Typography>
           </ListItem>
           <ListItem>
-            <Typography>{t("app-info.fields.group-code", { ns: "layout" })}</Typography>
+            <Typography>{t("app-info.fields.group-code", { ns: "layouts" })}</Typography>
             <Typography>{systemInfo.globalGroupCode}</Typography>
           </ListItem>
         </List>

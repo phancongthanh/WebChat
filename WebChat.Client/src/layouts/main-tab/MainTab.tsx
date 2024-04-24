@@ -34,21 +34,21 @@ export default function MainTab({ tab, changeTab }: { tab: TabType; changeTab: (
         </Stack>
         <ToggleButton
           className="text-white w-16 h-16 border-none"
-          title={t("main-tab.btn-title.message", { ns: "layout" })}
+          title={t("main-tab.btn-title.message", { ns: "layouts" })}
           value={TabType.Conversations}
         >
           <FontAwesomeIcon icon="comment" size="2xl" />
         </ToggleButton>
         <ToggleButton
           className="text-white w-16 h-16 border-none"
-          title={t("main-tab.btn-title.friend", { ns: "layout" })}
+          title={t("main-tab.btn-title.friend", { ns: "layouts" })}
           value={TabType.Friends}
         >
           <FontAwesomeIcon icon="user-group" size="2xl" />
         </ToggleButton>
         <ToggleButton
           className="text-white w-16 h-16 border-none"
-          title={t("main-tab.btn-title.group", { ns: "layout" })}
+          title={t("main-tab.btn-title.group", { ns: "layouts" })}
           value={TabType.Groups}
         >
           <FontAwesomeIcon icon="users" size="2xl" />
@@ -57,7 +57,7 @@ export default function MainTab({ tab, changeTab }: { tab: TabType; changeTab: (
       <ToggleButtonGroup orientation="vertical">
         <ToggleButton
           className="text-white w-16 h-16 border-none"
-          title={t("main-tab.btn-title.cloud", { ns: "layout" })}
+          title={t("main-tab.btn-title.cloud", { ns: "layouts" })}
           value=""
           onClick={() => navigate("Cloud")}
         >
@@ -65,7 +65,7 @@ export default function MainTab({ tab, changeTab }: { tab: TabType; changeTab: (
         </ToggleButton>
         <ToggleButton
           className="text-white w-16 h-16 border-none"
-          title={t("main-tab.btn-title.setting", { ns: "layout" })}
+          title={t("main-tab.btn-title.setting", { ns: "layouts" })}
           value=""
           selected={settingMenu}
           onClick={() => setOpen(true)}

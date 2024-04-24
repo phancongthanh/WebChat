@@ -30,14 +30,14 @@ export default function CloudConversationItem({ conversation }: { conversation: 
         </ListItemIcon>
         <ListItemText>
           <Typography className="whitespace-nowrap overflow-hidden text-ellipsis">
-            {t("conversation-list.cloud-name", { ns: "layout" })}
+            {t("conversation-list.cloud-name", { ns: "layouts" })}
           </Typography>
           <Typography className="whitespace-nowrap overflow-hidden text-ellipsis text-xs text-gray-500">
             <ActiveComponent condition={message.text}>
               <TextWithEmojiRender text={message.text} />
             </ActiveComponent>
             <ActiveComponent condition={!message.text}>
-              {t("conversation-list.file-message", { ns: "layout" })}
+              {t("conversation-list.file-message", { ns: "layouts" })}
             </ActiveComponent>
           </Typography>
         </ListItemText>

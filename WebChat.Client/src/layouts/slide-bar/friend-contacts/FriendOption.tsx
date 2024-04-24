@@ -66,11 +66,11 @@ function FriendMenu({ friend }: { friend: User }) {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleMore}>{t("friend-contacts.menu.more", { ns: "layout" })}</MenuItem>
-        <MenuItem onClick={handleAlias}>{t("friend-contacts.menu.alias", { ns: "layout" })}</MenuItem>
+        <MenuItem onClick={handleMore}>{t("friend-contacts.menu.more", { ns: "layouts" })}</MenuItem>
+        <MenuItem onClick={handleAlias}>{t("friend-contacts.menu.alias", { ns: "layouts" })}</MenuItem>
         <Divider />
         <MenuItem onClick={handleDelete} sx={{ color: "error.main" }}>
-          {t("friend-contacts.menu.delete", { ns: "layout" })}
+          {t("friend-contacts.menu.delete", { ns: "layouts" })}
         </MenuItem>
       </Menu>
       <DeleteFriendConfirm friendId={friend.userId} open={deleteConfirm} onClose={() => setDelete(false)} />

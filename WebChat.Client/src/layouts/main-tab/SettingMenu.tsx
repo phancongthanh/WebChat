@@ -36,19 +36,19 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
           <ListItemIcon className="text-inherit">
             <FontAwesomeIcon icon="user" />
           </ListItemIcon>
-          <ListItemText>{t("settings-menu.account-info", { ns: "layout" })}</ListItemText>
+          <ListItemText>{t("settings-menu.account-info", { ns: "layouts" })}</ListItemText>
         </MenuItem>
         <MenuItem onClick={() => setModal("ChangePassword")}>
           <ListItemIcon className="text-inherit">
             <FontAwesomeIcon icon="key" />
           </ListItemIcon>
-          <ListItemText>{t("settings-menu.change-password", { ns: "layout" })}</ListItemText>
+          <ListItemText>{t("settings-menu.change-password", { ns: "layouts" })}</ListItemText>
         </MenuItem>
         <MenuItem onClick={onClose}>
           <ListItemIcon className="text-inherit">
             <FontAwesomeIcon icon="gear" />
           </ListItemIcon>
-          <ListItemText>{t("settings-menu.settings", { ns: "layout" })}</ListItemText>
+          <ListItemText>{t("settings-menu.settings", { ns: "layouts" })}</ListItemText>
         </MenuItem>
         <Divider />
         <Tooltip
@@ -67,7 +67,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
                     <FontAwesomeIcon className="text-base" icon="check" />
                   </ActiveComponent>
                 </ListItemIcon>
-                <ListItemText>{t("settings-menu.vi", { ns: "layout" })}</ListItemText>
+                <ListItemText>{t("settings-menu.vi", { ns: "layouts" })}</ListItemText>
               </MenuItem>
               <MenuItem onClick={() => changeLanguage(Language.EN)}>
                 <ListItemIcon className="text-inherit">
@@ -75,7 +75,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
                     <FontAwesomeIcon className="text-base" icon="check" />
                   </ActiveComponent>
                 </ListItemIcon>
-                <ListItemText>{t("settings-menu.en", { ns: "layout" })}</ListItemText>
+                <ListItemText>{t("settings-menu.en", { ns: "layouts" })}</ListItemText>
               </MenuItem>
             </MenuList>
           }
@@ -84,7 +84,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
             <ListItemIcon className="text-inherit">
               <FontAwesomeIcon icon="language" />
             </ListItemIcon>
-            <ListItemText>{t("settings-menu.language", { ns: "layout" })}</ListItemText>
+            <ListItemText>{t("settings-menu.language", { ns: "layouts" })}</ListItemText>
             <Typography component="span" position="relative" noWrap overflow="visible">
               <FontAwesomeIcon icon="chevron-right" />
             </Typography>
@@ -101,10 +101,10 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
           title={
             <MenuList className="bg-white text-black">
               <MenuItem onClick={() => setModal("AppInfo")}>
-                <ListItemText>{t("settings-menu.version", { ns: "layout" })}</ListItemText>
+                <ListItemText>{t("settings-menu.version", { ns: "layouts" })}</ListItemText>
               </MenuItem>
               <MenuItem onClick={onClose}>
-                <ListItemText>{t("settings-menu.report", { ns: "layout" })}</ListItemText>
+                <ListItemText>{t("settings-menu.report", { ns: "layouts" })}</ListItemText>
               </MenuItem>
             </MenuList>
           }
@@ -113,7 +113,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
             <ListItemIcon className="text-inherit">
               <FontAwesomeIcon icon="circle-question" />
             </ListItemIcon>
-            <ListItemText>{t("settings-menu.about", { ns: "layout" })}</ListItemText>
+            <ListItemText>{t("settings-menu.about", { ns: "layouts" })}</ListItemText>
             <Typography component="span" position="relative" noWrap color="inherit" overflow="visible">
               <FontAwesomeIcon icon="chevron-right" />
             </Typography>
@@ -124,7 +124,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
           <ListItemIcon className="text-inherit">
             <FontAwesomeIcon icon="arrow-right-from-bracket" />
           </ListItemIcon>
-          <ListItemText>{t("settings-menu.logout", { ns: "layout" })}</ListItemText>
+          <ListItemText>{t("settings-menu.logout", { ns: "layouts" })}</ListItemText>
         </MenuItem>
       </Menu>
       <UpdateInfoDialog open={modal === "UpdateProfile"} onClose={() => setModal(null)} />

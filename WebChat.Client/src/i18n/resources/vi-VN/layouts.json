@@ -17,6 +17,7 @@
   },
   "app-info": {
     "title": "WebChat",
+    "description": "Ứng dụng phát triển theo hướng clone lại Zalo PC!",
     "fields": {
       "app-name": "Tên ứng dụng",
       "version": "Phiên bản:",

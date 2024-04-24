@@ -25,7 +25,7 @@ export default function LoadingPage({ children }: { children: ReactNode }) {
       const systemInfo = await systemClient.getInfo();
       dispatch(setInfo(systemInfo));
       // step 1
-      await auth.checkLogged().then((islogged) => islogged || dispatch(showError(new UnauthorizedError())));
+      await auth.getAccessToken();
       setStep(1);
       // step 2
       const currentUser = await usersClient.getCurrent();
@@ -49,7 +49,7 @@ export default function LoadingPage({ children }: { children: ReactNode }) {
     }
     if (loaded) return;
     loaded = true;
-    load();
+    load().catch((e) => dispatch(showError(e)));
   }, [dispatch]);
 
   switch (step) {

@@ -30,12 +30,16 @@ export default function GroupProfileDialog({
   const [modal, setModal] = useState<"Delete" | null>(null);
 
   return (
-    <Modal open={Boolean(group) && open} title={t("group-profile-dialog.title", { ns: "component" })} onClose={onClose}>
+    <Modal
+      open={Boolean(group) && open}
+      title={t("group-profile-dialog.title", { ns: "components" })}
+      onClose={onClose}
+    >
       <Stack width="250px" alignItems="center" textAlign="center" gap={1}>
         {groupId && <GroupAvatar groupId={groupId} size={96} />}
         <Typography className="text-xl">{group?.name}</Typography>
         <Typography className=" text-sm" color="secondary">
-          {t("group-profile-dialog.members", { ns: "component", count: group?.numberOfMembers })}
+          {t("group-profile-dialog.members", { ns: "components", count: group?.numberOfMembers })}
         </Typography>
         <AvatarGroup
           max={4}

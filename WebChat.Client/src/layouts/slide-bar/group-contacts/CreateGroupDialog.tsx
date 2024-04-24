@@ -27,8 +27,8 @@ const useSchema = (t: TFunction) =>
   yup.object().shape({
     name: yup
       .string()
-      .required(t("group-contacts.create.required-name", { ns: "layout" }))
-      .matches(/^[a-zA-Z\s,.'\-\p{L}]+$/u, t("group-contacts.create.invalid-name", { ns: "layout" })),
+      .required(t("group-contacts.create.required-name", { ns: "layouts" }))
+      .matches(/^[a-zA-Z\s,.'\-\p{L}]+$/u, t("group-contacts.create.invalid-name", { ns: "layouts" })),
     userIds: yup.array().min(2),
   });
 
@@ -61,7 +61,7 @@ export default function CreateGroupDialog({ open, onClose }: { open: boolean; on
   return (
     <FormDialog
       open={open}
-      title={t("group-contacts.create.title", { ns: "layout" })}
+      title={t("group-contacts.create.title", { ns: "layouts" })}
       okText={t("btns.create-group")}
       isValid={formik.isValid}
       isSubmitting={formik.isSubmitting}
@@ -72,7 +72,7 @@ export default function CreateGroupDialog({ open, onClose }: { open: boolean; on
         <FormControl fullWidth>
           <FormLabel className="mb-2">
             {t("group-contacts.create.name-recommend", {
-              ns: "layout",
+              ns: "layouts",
             })}
           </FormLabel>
           <TextField
@@ -80,7 +80,7 @@ export default function CreateGroupDialog({ open, onClose }: { open: boolean; on
             variant="outlined"
             fullWidth
             placeholder={t("group-contacts.create.name", {
-              ns: "layout",
+              ns: "layouts",
             })}
             name="name"
             onChange={formik.handleChange}
@@ -93,7 +93,7 @@ export default function CreateGroupDialog({ open, onClose }: { open: boolean; on
         <FormGroup>
           <FormLabel>
             {t("group-contacts.create.userIds", {
-              ns: "layout",
+              ns: "layouts",
             })}
           </FormLabel>
           <List className="relative overflow-auto max-h-80 normal-scroll-bar">

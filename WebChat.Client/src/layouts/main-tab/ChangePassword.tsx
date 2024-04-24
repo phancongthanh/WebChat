@@ -62,7 +62,7 @@ export default function ChangePassword({ open, onClose }: { open: boolean; onClo
   return (
     <FormDialog
       open={open}
-      title={t("change-password.title", { ns: "layout" })}
+      title={t("change-password.title", { ns: "layouts" })}
       isValid={formik.isValid}
       isSubmitting={formik.isSubmitting}
       onClose={onClose}
@@ -72,7 +72,7 @@ export default function ChangePassword({ open, onClose }: { open: boolean; onClo
         <FormControl fullWidth>
           <FormLabel>
             {t("change-password.old", {
-              ns: "layout",
+              ns: "layouts",
             })}
           </FormLabel>
           <TextField
@@ -91,7 +91,7 @@ export default function ChangePassword({ open, onClose }: { open: boolean; onClo
         <FormControl fullWidth>
           <FormLabel>
             {t("change-password.new", {
-              ns: "layout",
+              ns: "layouts",
             })}
           </FormLabel>
           <TextField
@@ -110,7 +110,7 @@ export default function ChangePassword({ open, onClose }: { open: boolean; onClo
         <FormControl fullWidth>
           <FormLabel>
             {t("change-password.confirm", {
-              ns: "layout",
+              ns: "layouts",
             })}
           </FormLabel>
           <TextField

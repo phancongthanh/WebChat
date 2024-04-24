@@ -31,8 +31,8 @@ const useSchema = (t: TFunction) =>
   yup.object().shape({
     code: yup
       .string()
-      .required(t("group-contacts.search.required-code", { ns: "layout" }))
-      .matches(/^[A-Z0-9a-z]{4,10}$/, t("group-contacts.search.invalid-code", { ns: "layout" })),
+      .required(t("group-contacts.search.required-code", { ns: "layouts" }))
+      .matches(/^[A-Z0-9a-z]{4,10}$/, t("group-contacts.search.invalid-code", { ns: "layouts" })),
   });
 
 export default function GroupSearchDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -71,7 +71,7 @@ export default function GroupSearchDialog({ open, onClose }: { open: boolean; on
   return (
     <FormDialog
       open={open}
-      title={t("group-contacts.search.title", { ns: "layout" })}
+      title={t("group-contacts.search.title", { ns: "layouts" })}
       okText={t("btns.search")}
       isValid={formik.isValid}
       isSubmitting={formik.isSubmitting}
@@ -86,10 +86,10 @@ export default function GroupSearchDialog({ open, onClose }: { open: boolean; on
         value={formik.values.code}
         onChange={formik.handleChange}
         placeholder={t("group-contacts.search.code", {
-          ns: "layout",
+          ns: "layouts",
         })}
         title={t("group-contacts.search.placeholder", {
-          ns: "layout",
+          ns: "layouts",
         })}
       />
       <Box textAlign="center" margin="20px auto" minHeight="50px">

@@ -68,15 +68,15 @@ function GroupMenu({ group }: { group: Group }) {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleMore}>{t("group-contacts.menu.more", { ns: "layout" })}</MenuItem>
+        <MenuItem onClick={handleMore}>{t("group-contacts.menu.more", { ns: "layouts" })}</MenuItem>
         <ActiveComponent
           condition={group.setting.allowChangeGName || GroupUtils.isAdmin(GroupUtils.getMember(group)?.role)}
         >
-          <MenuItem onClick={handleChangeName}>{t("group-contacts.menu.name", { ns: "layout" })}</MenuItem>
+          <MenuItem onClick={handleChangeName}>{t("group-contacts.menu.name", { ns: "layouts" })}</MenuItem>
         </ActiveComponent>
         <Divider />
         <MenuItem onClick={handleLeave} sx={{ color: "error.main" }}>
-          {t("group-contacts.menu.leave", { ns: "layout" })}
+          {t("group-contacts.menu.leave", { ns: "layouts" })}
         </MenuItem>
       </Menu>
       <LeaveGroupConfirm groupId={group.groupId} open={leaveConfirm} onClose={() => setDialog(false)} />

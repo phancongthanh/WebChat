@@ -16,15 +16,15 @@ export default function ConversationMenu({ conversation }: { conversation: Conve
   const [deleteConfirm, setDelete] = useState(false);
 
   const message = conversation.messages[conversation.messages.length - 1];
-  let time = t("conversation-list.time.few-sec", { ns: "layout" });
+  let time = t("conversation-list.time.few-sec", { ns: "layouts" });
   {
     let dentaTime = (new Date().getTime() - message.sendTime.getTime()) / 1000;
     dentaTime = Math.floor(dentaTime / 60);
-    if (dentaTime > 0) time = t("conversation-list.time.mins", { ns: "layout", mins: dentaTime });
+    if (dentaTime > 0) time = t("conversation-list.time.mins", { ns: "layouts", mins: dentaTime });
     dentaTime = Math.floor(dentaTime / 60);
-    if (dentaTime > 0) time = t("conversation-list.time.hours", { ns: "layout", hours: dentaTime });
+    if (dentaTime > 0) time = t("conversation-list.time.hours", { ns: "layouts", hours: dentaTime });
     dentaTime = Math.floor(dentaTime / 24);
-    if (dentaTime > 0) time = t("conversation-list.time.days", { ns: "layout", days: dentaTime });
+    if (dentaTime > 0) time = t("conversation-list.time.days", { ns: "layouts", days: dentaTime });
   }
 
   const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -67,13 +67,13 @@ export default function ConversationMenu({ conversation }: { conversation: Conve
         }}
       >
         {conversation?.isHidden ? (
-          <MenuItem onClick={handleShow}>{t("conversation-list.menu.show", { ns: "layout" })}</MenuItem>
+          <MenuItem onClick={handleShow}>{t("conversation-list.menu.show", { ns: "layouts" })}</MenuItem>
         ) : (
-          <MenuItem onClick={handleHide}>{t("conversation-list.menu.hidden", { ns: "layout" })}</MenuItem>
+          <MenuItem onClick={handleHide}>{t("conversation-list.menu.hidden", { ns: "layouts" })}</MenuItem>
         )}
         <Divider />
         <MenuItem onClick={handleDelete} sx={{ color: "error.main" }}>
-          {t("conversation-list.menu.delete", { ns: "layout" })}
+          {t("conversation-list.menu.delete", { ns: "layouts" })}
         </MenuItem>
       </Menu>
       <DeleteConversationConfirm
