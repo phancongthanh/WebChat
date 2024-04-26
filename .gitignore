@@ -3,6 +3,13 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# publish result
+dist/
+.config/
+ServiceDependencies/
+serviceDependencies.*
+libman.json
+
 # dotenv files
 .env
 
