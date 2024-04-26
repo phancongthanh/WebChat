@@ -31,7 +31,7 @@ internal class AuthService(
         var key = _jwtBearerOptions.TokenValidationParameters.IssuerSigningKey;
         var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var notBefore = DateTime.UtcNow;
-        var expires = DateTime.UtcNow.AddMinutes(2);
+        var expires = DateTime.UtcNow.AddHours(1);
         var securityToken = new JwtSecurityToken(issuer, audience, claims, notBefore, expires, signingCredentials);
         return new JwtSecurityTokenHandler().WriteToken(securityToken);
     }
@@ -57,7 +57,7 @@ internal class AuthService(
             UserId = user.Id,
             RefreshToken = Guid.NewGuid().ToString(),
             AccessToken = CreateAccessToken(user),
-            ExpiresTime = DateTimeOffset.UtcNow.AddMinutes(60)
+            ExpiresTime = DateTimeOffset.UtcNow.AddDays(7)
         };
 
         // Save and return
