@@ -63,7 +63,7 @@ export default function ChatBar({
 
   return (
     <Stack className="py-3" gap={1}>
-      <List className="empty:hidden px-4 min-w-96 max-w-full max-h-44 overflow-auto normal-scroll-bar">
+      <List className="empty:hidden px-4 min-w-80 box-border w-fit max-w-full max-h-44 overflow-auto normal-scroll-bar">
         {files.map((file) => (
           <FileItem key={file.name} file={file} onDelete={() => setFiles(files.filter((f) => f !== file))} />
         ))}

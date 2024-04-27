@@ -1,5 +1,5 @@
 .chat-message {
-  max-width: 80%;
+  max-width: 90%;
   @apply box-border;
   align-self: start;
   .user-name {
