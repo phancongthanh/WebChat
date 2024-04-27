@@ -34,7 +34,7 @@ export default function ChatMessage({ isBreak, message }: { isBreak?: boolean; m
     setModal(null);
   };
 
-  let className = "chat-message";
+  let className = "chat-message hidden-action-container";
   if (message.fromUserId === currentUserId) className += " me";
   if (isBreak) className += " break";
 
@@ -45,7 +45,7 @@ export default function ChatMessage({ isBreak, message }: { isBreak?: boolean; m
       </ActiveComponent>
       <ActiveComponent condition={currentUserId === message.fromUserId}>
         <Stack justifyContent="center">
-          <IconButton className="more-btn" onClick={(e) => setAnchorEl(e.currentTarget)}>
+          <IconButton className="hidden-action" onClick={(e) => setAnchorEl(e.currentTarget)}>
             <SquareIcon>
               <FontAwesomeIcon icon="ellipsis" />
             </SquareIcon>

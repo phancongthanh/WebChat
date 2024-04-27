@@ -11,7 +11,6 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  SxProps,
   Typography,
 } from "@mui/material";
 import User from "../../../types/User";
@@ -48,7 +47,7 @@ function FriendMenu({ friend }: { friend: User }) {
 
   return (
     <Box>
-      <IconButton edge="end" onClick={handleOpen}>
+      <IconButton className="hidden-action" edge="end" onClick={handleOpen}>
         <SquareIcon>
           <FontAwesomeIcon icon="ellipsis" />
         </SquareIcon>
@@ -78,18 +77,9 @@ function FriendMenu({ friend }: { friend: User }) {
   );
 }
 
-const style: SxProps = {
-  "& .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: { md: "none" },
-  },
-  "&:hover .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: "flex",
-  },
-};
-
 export default function FriendOption({ friend }: { friend: User }) {
   return (
-    <ListItem disablePadding sx={style} secondaryAction={<FriendMenu friend={friend} />}>
+    <ListItem disablePadding className="hidden-action-container" secondaryAction={<FriendMenu friend={friend} />}>
       <ListItemButton component={MuiNavLink} to={"/User/" + friend.userId}>
         <ListItemIcon>
           <UserAvatar userId={friend.userId} size={40} />

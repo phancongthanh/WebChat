@@ -11,7 +11,6 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  SxProps,
   Typography,
 } from "@mui/material";
 import Group from "../../../types/Group";
@@ -50,7 +49,7 @@ function GroupMenu({ group }: { group: Group }) {
 
   return (
     <Box>
-      <IconButton edge="end" aria-label="delete" onClick={handleOpen}>
+      <IconButton className="hidden-action" edge="end" aria-label="delete" onClick={handleOpen}>
         <SquareIcon>
           <FontAwesomeIcon icon="ellipsis" />
         </SquareIcon>
@@ -84,18 +83,9 @@ function GroupMenu({ group }: { group: Group }) {
   );
 }
 
-const style: SxProps = {
-  "& .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: { md: "none" },
-  },
-  "&:hover .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: "flex",
-  },
-};
-
 export default function GroupOption({ group }: { group: Group }) {
   return (
-    <ListItem disablePadding sx={style} secondaryAction={<GroupMenu group={group} />}>
+    <ListItem disablePadding className="hidden-action-container" secondaryAction={<GroupMenu group={group} />}>
       <ListItemButton component={MuiNavLink} to={"/Group/" + group.groupId}>
         <ListItemIcon>
           <GroupAvatar groupId={group.groupId} size={40} />

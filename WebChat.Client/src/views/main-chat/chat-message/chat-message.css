@@ -1,5 +1,5 @@
 .chat-message {
-  max-width: calc(100% - 200px);
+  max-width: 80%;
   @apply box-border;
   align-self: start;
   .user-name {
@@ -47,10 +47,4 @@
   &:last-child .message-status {
     display: block;
   }
-}
-.chat-message .more-btn {
-  opacity: 0;
-}
-.chat-message:hover .more-btn {
-  opacity: 1;
 }

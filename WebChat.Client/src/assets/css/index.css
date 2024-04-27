@@ -61,3 +61,11 @@ body,
 em-emoji {
   vertical-align: middle;
 }
+@media (any-hover: hover) {
+  .hidden-action-container .hidden-action {
+    opacity: 0;
+  }
+  .hidden-action-container:hover .hidden-action {
+    opacity: 1;
+  }
+}
