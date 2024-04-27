@@ -20,7 +20,6 @@ export default function EmojiPicker({ onSelect }: { onSelect: (emoji: EmojiProps
         theme="light"
         set="apple"
         locale="vi"
-        autoFocus={true}
         onEmojiSelect={onSelect}
       />
     </Box>

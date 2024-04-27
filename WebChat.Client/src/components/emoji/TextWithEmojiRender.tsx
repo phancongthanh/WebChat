@@ -27,21 +27,20 @@ export default function TextWithEmojiRender({
   replaceEnter?: boolean;
 }) {
   const output = splitTextWithEmoji(children || text || "");
-  console.log(output);
-  const elements = output.map((e) => {
+  const elements = output.map((e, index) => {
     switch (e.type) {
       case "string": {
-        if (!replaceEnter) return <span>{e.value}</span>;
+        if (!replaceEnter) return <span key={index}>{e.value}</span>;
         const lines = e.value.split("\n");
         const result = [lines[0]] as Array<ReactNode>;
         for (let i = 1; i < lines.length; i++) {
-          result.push(<br />);
+          result.push(<br key={i} />);
           result.push(lines[i]);
         }
-        return <span>{result}</span>;
+        return <span key={index}>{result}</span>;
       }
       case "native":
-        return <EmojiRender native={e.value} set="apple" />;
+        return <EmojiRender key={index} native={e.value} set="apple" />;
       default:
         return e.value;
     }
