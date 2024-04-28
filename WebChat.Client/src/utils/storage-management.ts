@@ -57,4 +57,4 @@ export default class StorageManagement {
   }
 }
 
-export const storage = new StorageManagement(sessionStorage);
+export const storage = new StorageManagement(localStorage);

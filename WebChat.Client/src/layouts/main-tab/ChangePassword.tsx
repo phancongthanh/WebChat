@@ -68,7 +68,7 @@ export default function ChangePassword({ open, onClose }: { open: boolean; onClo
       onClose={onClose}
       onSubmit={formik.handleSubmit}
     >
-      <Stack width="300px" gap={2}>
+      <Stack className="w-80 max-w-full" gap={2}>
         <FormControl fullWidth>
           <FormLabel>
             {t("change-password.old", {

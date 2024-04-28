@@ -38,8 +38,8 @@ export default function ConfirmDialog({
         </Typography>
         {title || t("confirm-dialog.title", { ns: "components" })}
       </StyledDialogTitle>
-      <DialogContent>{children}</DialogContent>
-      <DialogActions>
+      <DialogContent className="py-3 px-4">{children}</DialogContent>
+      <DialogActions className="py-3 px-4">
         <CancelButton onClick={onClose} {...cancelBtnProps}>
           {cancelText}
         </CancelButton>

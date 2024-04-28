@@ -40,7 +40,7 @@ internal class ConversationRepository(ApplicationDbContext context) : IConversat
     {
         var entity = await context.Conversations
             .Include(c => c.Members)
-            .Include(c => c.Messages.OrderByDescending(m => m.MessageId).Take(1))
+            .Include(c => c.Messages.OrderByDescending(m => m.MessageId).Take(5))
             .AsNoTracking()
             .Where(g => g.ConversationId == conversationId)
             .AsSplitQuery()
@@ -54,7 +54,7 @@ internal class ConversationRepository(ApplicationDbContext context) : IConversat
     {
         var conversations = await context.Conversations
             .Include(c => c.Members)
-            .Include(c => c.Messages.OrderByDescending(m => m.MessageId).Take(1))
+            .Include(c => c.Messages.OrderByDescending(m => m.MessageId).Take(5))
             .AsNoTracking()
             .Where(c => c.Members.Any(m => m.UserId == userId))
             .AsSplitQuery()

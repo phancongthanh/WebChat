@@ -2,17 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Collapse,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Stack,
-  SxProps,
-  Typography,
-} from "@mui/material";
+import { Collapse, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material";
 import Group, { JoinRequest } from "../../types/Group";
 import GroupUtils from "../../utils/group-utils";
 import { AppDispatch } from "../../store";
@@ -24,15 +14,6 @@ import AsyncButton from "../../components/AsyncButton";
 import ConfirmDialog from "../../components/ConfirmDialog";
 import UserAvatar from "../../components/avatar/UserAvatar";
 
-const style: SxProps = {
-  "& button": {
-    display: "none",
-  },
-  "&:hover button": {
-    display: "flex",
-  },
-};
-
 function RequestOption({ request, isAdmin }: { request: JoinRequest; isAdmin?: boolean }) {
   const { t } = useTranslation();
   const dispatch = useDispatch<AppDispatch>();
@@ -42,7 +23,7 @@ function RequestOption({ request, isAdmin }: { request: JoinRequest; isAdmin?: b
 
   return (
     <>
-      <ListItemButton sx={style} disableRipple>
+      <ListItemButton className="hidden-action-container" disableRipple>
         <ListItemIcon>
           <UserAvatar userId={request.userId} size={40} onClick={() => showUserProfile(request.userId)} />
         </ListItemIcon>
@@ -52,7 +33,7 @@ function RequestOption({ request, isAdmin }: { request: JoinRequest; isAdmin?: b
           </Typography>
         </ListItemText>
         <ActiveComponent condition={isAdmin}>
-          <Stack direction="row" gap={1}>
+          <Stack className="hidden-action" direction="row" gap={1}>
             <AsyncButton size="small" color="error" onClick={() => setModal("Reject")}>
               {t("btns.reject")}
             </AsyncButton>

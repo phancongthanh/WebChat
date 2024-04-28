@@ -7,6 +7,7 @@ import * as yup from "yup";
 import { AppDispatch } from "../store";
 import useUser from "../hooks/useUser";
 import { setFriendAlias } from "../thunks/friendThunk";
+import ActiveComponent from "../components/ActiveComponent";
 import CancelButton from "../components/CancelButton";
 import FormDialog from "../components/FormDialog";
 import UserAvatar from "../components/avatar/UserAvatar";
@@ -59,9 +60,11 @@ export default function SetAliasDialog({
       onClose={onClose}
       btns={
         <>
-          <Button variant="outlined" type="reset" disableRipple disabled={formik.isSubmitting || !friend?.alias}>
-            {t("set-alias-dialog.btns.reset", { ns: "views" })}
-          </Button>
+          <ActiveComponent condition={friend?.alias}>
+            <Button variant="outlined" type="reset" disableRipple disabled={formik.isSubmitting}>
+              {t("set-alias-dialog.btns.reset", { ns: "views" })}
+            </Button>
+          </ActiveComponent>
           <Box flex={1} />
           <CancelButton onClick={onClose} />
           <Button

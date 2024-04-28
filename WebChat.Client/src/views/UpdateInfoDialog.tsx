@@ -18,8 +18,9 @@ import GenderPicker from "../components/GenderPicker";
 import UserAvatar from "../components/avatar/UserAvatar";
 
 const avatarBackgroundStyle: React.CSSProperties = {
-  margin: "-16px -24px 0 -24px",
+  margin: "-16px -16px 0 -16px",
   width: "420px",
+  maxWidth: "calc(100% + 32px)",
   height: "180px",
   objectFit: "cover",
 };

@@ -2,17 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Collapse,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Stack,
-  SxProps,
-  Typography,
-} from "@mui/material";
+import { Collapse, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material";
 import Group, { JoinInvitation } from "../../types/Group";
 import GroupUtils from "../../utils/group-utils";
 import { AppDispatch } from "../../store";
@@ -23,15 +13,6 @@ import { undoGroupInvitation } from "../../thunks/groupThunk";
 import ActiveComponent from "../../components/ActiveComponent";
 import AsyncButton from "../../components/AsyncButton";
 import UserAvatar from "../../components/avatar/UserAvatar";
-
-const style: SxProps = {
-  "& button": {
-    display: "none",
-  },
-  "&:hover button": {
-    display: "flex",
-  },
-};
 
 function InvitationOption({ request, isAdmin }: { request: JoinInvitation; isAdmin?: boolean }) {
   const { t } = useTranslation();
@@ -44,7 +25,7 @@ function InvitationOption({ request, isAdmin }: { request: JoinInvitation; isAdm
   const handleUndo = async () => dispatch(undoGroupInvitation(request));
 
   return (
-    <ListItemButton sx={style} disableRipple>
+    <ListItemButton className="hidden-action-container" disableRipple>
       <ListItemIcon>
         <UserAvatar userId={request.userId} size={40} onClick={() => showUserProfile(request.userId)} />
       </ListItemIcon>
@@ -55,7 +36,7 @@ function InvitationOption({ request, isAdmin }: { request: JoinInvitation; isAdm
         </Typography>
       </ListItemText>
       <ActiveComponent condition={isAdmin || currentUserId === request.memberId}>
-        <Stack direction="row" gap={1}>
+        <Stack className="hidden-action" direction="row">
           <AsyncButton size="small" color="error" onClick={handleUndo}>
             {t("btns.undo")}
           </AsyncButton>

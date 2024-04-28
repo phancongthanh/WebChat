@@ -68,7 +68,7 @@ export default function CreateGroupDialog({ open, onClose }: { open: boolean; on
       onSubmit={formik.handleSubmit}
       onClose={onClose}
     >
-      <Stack className="w-80" gap={3}>
+      <Stack className="w-80 max-w-full" gap={3}>
         <FormControl fullWidth>
           <FormLabel className="mb-2">
             {t("group-contacts.create.name-recommend", {

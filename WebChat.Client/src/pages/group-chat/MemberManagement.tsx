@@ -13,7 +13,6 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  SxProps,
   Typography,
 } from "@mui/material";
 import { MemberRole } from "../../enums/MemberRole";
@@ -72,7 +71,7 @@ function MemberMenu({ member }: { member: GroupMember }) {
     <ActiveComponent
       condition={currentMember && GroupUtils.isAdmin(currentMember.role) && currentMember.role > member.role}
     >
-      <IconButton edge="end" onClick={handleOpen}>
+      <IconButton className="hidden-action" edge="end" onClick={handleOpen}>
         <SquareIcon>
           <FontAwesomeIcon icon="ellipsis" />
         </SquareIcon>
@@ -145,15 +144,6 @@ function MemberMenu({ member }: { member: GroupMember }) {
   );
 }
 
-const style: SxProps = {
-  "& .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: { md: "none" },
-  },
-  "&:hover .MuiListItemSecondaryAction-root .SquareIcon": {
-    display: "flex",
-  },
-};
-
 function MemberOption({ member }: { member: GroupMember }) {
   const { t } = useTranslation();
   const user = useUser(member.userId);
@@ -161,7 +151,7 @@ function MemberOption({ member }: { member: GroupMember }) {
   const { showUserProfile } = useGlobalElement();
 
   return (
-    <ListItem disablePadding sx={style} secondaryAction={<MemberMenu member={member} />}>
+    <ListItem disablePadding className="hidden-action-container" secondaryAction={<MemberMenu member={member} />}>
       <ListItemButton disableRipple>
         <ListItemIcon>
           <UserAvatar userId={member.userId} size={40} onClick={() => showUserProfile(member.userId)} />

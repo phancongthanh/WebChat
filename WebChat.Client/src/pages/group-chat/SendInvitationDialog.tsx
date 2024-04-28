@@ -111,7 +111,7 @@ export default function SendInvitationDialog({
       okBtnProps={{ onClick: handleSubmit }}
       onClose={onClose}
     >
-      <Stack className="w-80" gap={2}>
+      <Stack className="w-80 max-w-full" gap={2}>
         <FormControl fullWidth>
           <TextField
             size="small"

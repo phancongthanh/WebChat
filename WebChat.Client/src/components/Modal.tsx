@@ -15,7 +15,9 @@ export default function Modal({ title, children, btns, open, onClose }: ModalPro
   return (
     <Dialog open={open} onClose={onClose}>
       <StyledDialogTitle onClose={onClose}>{title}</StyledDialogTitle>
-      <DialogContent dividers>{children}</DialogContent>
+      <DialogContent className="disable-scroll-bar" dividers>
+        {children}
+      </DialogContent>
       <ActiveComponent condition={btns}>
         <DialogActions>{btns}</DialogActions>
       </ActiveComponent>

@@ -6,7 +6,7 @@ import SquareIcon from "./SquareIcon";
 
 export default function StyledDialogTitle({ children, onClose }: { children?: ReactNode; onClose?: () => void }) {
   return (
-    <DialogTitle position="relative" padding="10px 24px !important">
+    <DialogTitle position="relative" padding="10px 20px !important">
       {children}
       <ActiveComponent condition={Boolean(onClose)}>
         <IconButton className="absolute right-2 top-1/2 -translate-y-1/2" onClick={onClose}>

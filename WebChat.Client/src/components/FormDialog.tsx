@@ -56,8 +56,10 @@ export default function FormDialog({
       }}
     >
       <StyledDialogTitle onClose={onClose}>{title}</StyledDialogTitle>
-      <DialogContent dividers>{children}</DialogContent>
-      <DialogActions>
+      <DialogContent dividers className="py-3 px-4 disable-scroll-bar">
+        {children}
+      </DialogContent>
+      <DialogActions className="py-3 px-4">
         {btns}
         <ActiveComponent condition={!btns}>
           <CancelButton onClick={onClose} {...cancelBtnProps}>

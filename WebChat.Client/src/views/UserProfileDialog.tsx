@@ -41,6 +41,7 @@ export default function UserProfileDialog({
               style={{
                 margin: "-16px -24px 0",
                 width: "360px",
+                maxWidth: "calc(100% + 48px)",
                 height: "180px",
                 objectFit: "cover",
               }}

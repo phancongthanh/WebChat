@@ -33,7 +33,7 @@ export default function GroupRequests() {
       </Box>
       <Stack justifyContent="center" alignItems="center" gap={1} flex={100} sx={emptyContentStyle}>
         <img className=" w-80" src={emptyLAN} alt="empty-LAN" />
-        <Typography>{t("group-requests.empty", { ns: "pages" })}</Typography>
+        <Typography className="text-center">{t("group-requests.empty", { ns: "pages" })}</Typography>
         <Button variant="outlined" onClick={() => setGroupSearch(true)}>
           {t("btns.search")}
         </Button>

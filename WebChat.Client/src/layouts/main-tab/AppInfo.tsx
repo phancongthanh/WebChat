@@ -9,12 +9,17 @@ const style: SxProps = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  minWidth: 400,
+  width: 400,
+  maxWidth: "90%",
   bgcolor: "background.paper",
   overflow: "hidden",
   "& .MuiList-root .MuiTypography-root:first-child": {
     fontWeight: "bold",
-    width: "125px",
+    flex: "0 0 130px",
+  },
+  "& .MuiList-root .MuiTypography-root": {
+    flex: 1,
+    wordWrap: "break-word",
   },
 };
 

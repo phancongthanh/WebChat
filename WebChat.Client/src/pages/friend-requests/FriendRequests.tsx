@@ -33,7 +33,7 @@ export default function FriendRequests() {
       </Box>
       <Stack justifyContent="center" alignItems="center" gap={1} flex={100} sx={emptyContentStyle}>
         <img className=" w-80" src={emptyLAN} alt="empty-LAN" />
-        <Typography>{t("friend-requests.empty", { ns: "pages" })}</Typography>
+        <Typography className="text-center">{t("friend-requests.empty", { ns: "pages" })}</Typography>
         <Button variant="outlined" onClick={() => setFriendSearch(true)}>
           {t("btns.add-friend")}
         </Button>
