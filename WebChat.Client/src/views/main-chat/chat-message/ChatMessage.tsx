@@ -67,10 +67,11 @@ export default function ChatMessage({ isBreak, message }: { isBreak?: boolean; m
             </Typography>
           </ActiveComponent>
         </CardContent>
+        <div />
       </Card>
       <ActiveComponent condition={currentUserId !== message.fromUserId}>
         <Stack justifyContent="center">
-          <IconButton className="more-btn" onClick={(e) => setAnchorEl(e.currentTarget)}>
+          <IconButton className="hidden-action" onClick={(e) => setAnchorEl(e.currentTarget)}>
             <SquareIcon>
               <FontAwesomeIcon icon="ellipsis" />
             </SquareIcon>

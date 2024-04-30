@@ -12,7 +12,7 @@
     }
   }
   .message-time {
-    display: block;
+    display: none;
   }
   .message-status {
     display: none;
@@ -22,7 +22,8 @@
   }
 }
 
-.chat-message.break {
+.chat-message.break,
+*:not(.chat-message) + .chat-message {
   .user-name {
     display: block;
   }
@@ -30,8 +31,10 @@
     opacity: 1;
   }
 }
-*:not(.chat-message) + .chat-message {
-  .user-name {
+
+.chat-message:not(:has(+ .chat-message)),
+.chat-message:has(+ .break) {
+  .message-time {
     display: block;
   }
 }

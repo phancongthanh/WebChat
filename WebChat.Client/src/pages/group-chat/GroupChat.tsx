@@ -72,8 +72,13 @@ export default function GroupChat() {
       </Stack>
       <SendInvitationDialog open={modal === "Send-Invitation"} groupId={groupId} onClose={() => setMolal(null)} />
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <Stack className="w-80 h-screen max-h-screen">
-          <Stack className="w-full h-16" justifyContent="center" alignItems="center">
+        <Stack className="h-screen max-h-screen w-screen sm:w-80">
+          <Stack className="w-full h-16 relative" justifyContent="center" alignItems="center">
+            <IconButton className="absolute left-3 inline-flex sm:hidden" onClick={() => setOpen(false)}>
+              <SquareIcon>
+                <FontAwesomeIcon icon="chevron-left" size="xs" />
+              </SquareIcon>
+            </IconButton>
             <Typography className="font-medium text-lg">{t("group-chat.info.title", { ns: "pages" })}</Typography>
           </Stack>
           <Divider />
