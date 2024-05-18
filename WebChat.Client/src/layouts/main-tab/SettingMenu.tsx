@@ -56,6 +56,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
         <Tooltip
           disableFocusListener
           enterTouchDelay={0}
+          leaveDelay={50}
           placement="right"
           PopperProps={{
             className: "bg-white shadow-2xl rounded overflow-hidden",
@@ -95,6 +96,7 @@ export default function SettingMenu({ open, onClose }: { open: boolean; onClose:
         <Tooltip
           disableFocusListener
           enterTouchDelay={0}
+          leaveDelay={50}
           placement="right"
           PopperProps={{
             className: "bg-white shadow-2xl rounded overflow-hidden",
