@@ -27,7 +27,7 @@ export default function FriendRequests() {
         </Typography>
       </Header>
       <Divider />
-      <Box flex={1} overflow="auto">
+      <Box className="mx-auto w-11/12 md:w-4/5" flex={1} overflow="auto">
         <ReceivedRequestsList />
         <SentRequestsList />
       </Box>

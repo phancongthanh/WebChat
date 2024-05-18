@@ -21,8 +21,8 @@ export default function SentRequestsList() {
 
   return (
     <ActiveComponent condition={requests.length}>
-      <Stack className="requests-list" alignItems="center" gap={2} margin="16px 0">
-        <Typography fontWeight="bold" width="80%">
+      <Stack className="requests-list" gap={2} margin="16px 0">
+        <Typography fontWeight="bold">
           {t("friend-requests.sent-requests", {
             ns: "pages",
             count: requests.length,
